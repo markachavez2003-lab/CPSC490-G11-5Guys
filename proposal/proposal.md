@@ -140,11 +140,8 @@ apart.
 Write each objective the way the guidance above asks — **an action word plus
 the measure that says it is done**, not a role-play sentence:
 
-- **Goal 1: 〈e.g. Secure account management〉** (Epic #〈n〉)
-  - Objective 1.1: 〈Implement member registration and login with hashed
-    credentials, session expiry, and rejection of malformed input.〉 (#〈n〉)
-  - Objective 1.2: 〈Demonstrate the login round-trip in a runnable prototype
-    at the Week-8 in-class check.〉 (#〈n〉)
+- **Goal 1: Live runner tracking** (Epic #4)
+  - Objective 1.1: 〈Track postion during live event using phone〉 (#〈n〉)
 - **Goal 2: 〈your second goal〉** (Epic #〈n〉)
   - Objective 2.1: 〈Action word + what you will complete + how it will be
     measured〉 (#〈n〉)
