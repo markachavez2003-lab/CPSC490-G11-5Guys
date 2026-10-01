@@ -1,11 +1,12 @@
-# Project Proposal — 〈Project Title〉
+# Project Proposal — Marathon Tracker App
 
 **Department of Computer Science**
 **CPSC 490 Undergraduate Seminar in Computer Science — Proposal for Capstone Project**
 
-**Group 〈N〉 — 〈Group Name〉** · Sponsor: 〈RTX-3 / EL-1 / SNX-n / independent〉
-Authors: 〈Last, First (GitHub username)〉, 〈…〉
-Date: 〈YYYY-MM-DD〉
+**Group 11 — 5 Guys **  Sponsor: independent
+Authors: Chavez, Marco (markachavez2003) ,Covarrubias, Roberto (robertocovarrubias24), Castillo, Jaime (basikgoalz), Phan, Cardin (card1n) , Contreras, Luis (lcontreras18)
+Date: 2026-09-30
+Repository: https://github.com/markachavez2003-lab/CPSC490-G11-5Guys
 
 > **This file is the proposal document, not a README.** Its section numbers,
 > titles, and guidance are copied from the course Word template, so it
@@ -70,6 +71,11 @@ Date: 〈YYYY-MM-DD〉
 > describes what makes your proposal different from existing ones.
 
 〈Your introduction.〉
+During a marathon event, runners track their distance and routes through GPS coordinates, with the use of watches and smartphones as tracking devices. These distances play a large role in the way the event takes place, as they determine routes, pacing, mile markers, and event meeting points between the runners and in-person supporters. 
+
+In the modern day, there exist numerous apps which all contain different methods of tracking an individual's path traveled and time. These running apps are usually tailored with individual runners in mind. More often than not, the data recorded is saved, allowing for sharing after the runner has finished.
+
+Moreover, most smartphones contain built-in GPS systems that allow people to walk, drive, and cycle to their areas of interest with high levels of accuracy [1]. This, in conjunction with the ability to create custom software that interacts with databases and online storage, creates the opportunity to build software tailored to runner and supporter engagement.
 
 ### 1.1 Related Work
 
@@ -286,7 +292,7 @@ what fraction of each artifact was AI-assisted, and how you verified it.〉
 
 ## 8. References
 
-> [1] Burges, C. J. C. Tutorial on Support Vector Machines for Pattern
+[1] Osborne, A., Mossman, H., Caporn, S., and Coulthard, E. Comparing the accuracy and precision of smartphone and specialist handheld GNSS receivers for use in ecological fieldwork. Ecological Solutions and Evidence, 6(1), e70015, 2025. https://doi.org/10.1002/2688-8319.70015
 > Recognition. Kluwer Academic Publishers, 1998.
 > [2] Chen, P., Fan, R., and Lin, C. A study on SMO-type decomposition
 > methods for support vector machines. IEEE Transactions on Neural Networks,
