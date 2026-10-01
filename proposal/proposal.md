@@ -70,6 +70,11 @@ Date: 〈YYYY-MM-DD〉
 > describes what makes your proposal different from existing ones.
 
 〈Your introduction.〉
+During a marathon event, runners track their distance and routes through GPS coordinates, with the use of watches and smartphones as tracking devices. These distances play a large role in the way the event takes place, as they determine routes, pacing, mile markers, and event meeting points between the runners and in-person supporters. 
+
+In the modern day, there exist numerous apps which all contain different methods of tracking an individual's path traveled and time. These running apps are usually tailored with individual runners in mind. More often than not, the data recorded is saved, allowing for sharing after the runner has finished.
+
+Moreover, most smartphones contain built-in GPS systems that allow people to walk, drive, and cycle to their areas of interest with high levels of accuracy [1]. This, in conjunction with the ability to create custom software that interacts with databases and online storage, creates the opportunity to build software tailored to runner and supporter engagement.
 
 ### 1.1 Related Work
 
@@ -289,7 +294,7 @@ what fraction of each artifact was AI-assisted, and how you verified it.〉
 
 ## 8. References
 
-> [1] Burges, C. J. C. Tutorial on Support Vector Machines for Pattern
+[1] Osborne, A., Mossman, H., Caporn, S., and Coulthard, E. Comparing the accuracy and precision of smartphone and specialist handheld GNSS receivers for use in ecological fieldwork. Ecological Solutions and Evidence, 6(1), e70015, 2025. https://doi.org/10.1002/2688-8319.70015
 > Recognition. Kluwer Academic Publishers, 1998.
 > [2] Chen, P., Fan, R., and Lin, C. A study on SMO-type decomposition
 > methods for support vector machines. IEEE Transactions on Neural Networks,
