@@ -1,11 +1,12 @@
-# Project Proposal — 〈Project Title〉
+# Project Proposal — Marathon Tracker App
 
 **Department of Computer Science**
 **CPSC 490 Undergraduate Seminar in Computer Science — Proposal for Capstone Project**
 
-**Group 〈N〉 — 〈Group Name〉** · Sponsor: 〈RTX-3 / EL-1 / SNX-n / independent〉
-Authors: 〈Last, First (GitHub username)〉, 〈…〉
-Date: 〈YYYY-MM-DD〉
+**Group 11 — 5 Guys **  Sponsor: independent
+Authors: Chavez, Marco (markachavez2003) ,Covarrubias, Roberto (robertocovarrubias24), Castillo, Jaime (basikgoalz), Phan, Cardin (card1n) , Contreras, Luis (lcontreras18)
+Date: 2026-09-30
+Repository: https://github.com/markachavez2003-lab/CPSC490-G11-5Guys
 
 > **This file is the proposal document, not a README.** Its section numbers,
 > titles, and guidance are copied from the course Word template, so it
