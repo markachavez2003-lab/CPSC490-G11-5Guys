@@ -1,11 +1,12 @@
-# Project Proposal — 〈Project Title〉
+# Project Proposal — Marathon Tracker App
 
 **Department of Computer Science**
 **CPSC 490 Undergraduate Seminar in Computer Science — Proposal for Capstone Project**
 
-**Group 〈N〉 — 〈Group Name〉** · Sponsor: 〈RTX-3 / EL-1 / SNX-n / independent〉
-Authors: 〈Last, First (GitHub username)〉, 〈…〉
-Date: 〈YYYY-MM-DD〉
+**Group 11 — 5 Guys **  Sponsor: independent
+Authors: Chavez, Marco (markachavez2003) ,Covarrubias, Roberto (robertocovarrubias24), Castillo, Jaime (basikgoalz), Phan, Cardin (card1n) , Contreras, Luis (lcontreras18)
+Date: 2026-09-30
+Repository: https://github.com/markachavez2003-lab/CPSC490-G11-5Guys
 
 > **This file is the proposal document, not a README.** Its section numbers,
 > titles, and guidance are copied from the course Word template, so it
@@ -149,11 +150,8 @@ apart.
 Write each objective the way the guidance above asks — **an action word plus
 the measure that says it is done**, not a role-play sentence:
 
-- **Goal 1: 〈e.g. Secure account management〉** (Epic #〈n〉)
-  - Objective 1.1: 〈Implement member registration and login with hashed
-    credentials, session expiry, and rejection of malformed input.〉 (#〈n〉)
-  - Objective 1.2: 〈Demonstrate the login round-trip in a runnable prototype
-    at the Week-8 in-class check.〉 (#〈n〉)
+- **Goal 1: Live runner tracking** (Epic #4)
+  - Objective 1.1: 〈Track postion during live event using phone〉 (#〈n〉)
 - **Goal 2: 〈your second goal〉** (Epic #〈n〉)
   - Objective 2.1: 〈Action word + what you will complete + how it will be
     measured〉 (#〈n〉)
