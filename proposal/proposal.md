@@ -78,6 +78,7 @@ In the modern day, there exist numerous apps which all contain different methods
 Moreover, most smartphones contain built-in GPS systems that allow people to walk, drive, and cycle to their areas of interest with high levels of accuracy [1]. This, in conjunction with the ability to create custom software that interacts with databases and online storage, creates the opportunity to build software tailored to runner and supporter engagement.
 
 ### 1.1 Related Work
+<!-- Task #13: Related Work comparative analysis in progress. -->
 
 > Describe the related or existing work in detail. This section is like a
 > survey on the selected problem or topic.
