@@ -57,7 +57,11 @@ Repository: https://github.com/markachavez2003-lab/CPSC490-G11-5Guys
 > paragraph. Abstract should not exceed one page. Any abstract exceeded
 > one-page limit must be shortened.
 
-〈Your abstract. Write it last.〉
+Marathon runners rely on GPS devices, such as smartphones and watches, to track routes, distances, and running times. Although existing running apps provide tools for recording and reviewing this information, some of those apps may rely on specialized equipment or features that may increase the cost of entry for runners looking to find more detailed performance analysis. The widespread use of smartphones provides an opportunity to develop a more accessible approach to collecting and analyzing running data.
+
+This project proposes a mobile application that uses GPS data and machine learning to analyze an individual's running performance. The app will record a runner's route and time and use publicly available marathon data, such as routes and performance times, as a baseline for analysis. By comparing an individual's running data with existing performance data, the system will explore methods for identifying more efficient running patterns and routes.
+
+The proposed systen is significant because it combines commonly available smartphone technology with data-driven analysis rather than requiring specialized tracking equipment. The project aims to demonstrate how publicly available marathon data and machine learning techniques can be incorporated into an accessible running application. The outcome of this project will be a functional prototype capable of collecting GPS-based running data, storing performance information, and providing analysis based on the collected and publicly available data.
 
 ## 1. Introduction
 
