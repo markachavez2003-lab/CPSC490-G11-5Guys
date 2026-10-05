@@ -70,13 +70,17 @@ Repository: https://github.com/markachavez2003-lab/CPSC490-G11-5Guys
 > importance or usefulness of the problem solving or project. Further
 > describes what makes your proposal different from existing ones.
 
-〈Your introduction.〉
+
 During a marathon event, runners track their distance and routes through GPS coordinates, with the use of watches and smartphones as tracking devices. These distances play a large role in the way the event takes place, as they determine routes, pacing, mile markers, and event meeting points between the runners and in-person supporters. 
 
 In the modern day, there exist numerous apps which all contain different methods of tracking an individual's path traveled and time. These running apps are usually tailored with individual runners in mind. More often than not, the data recorded is saved, allowing for sharing after the runner has finished.
 
 Moreover, most smartphones contain built-in GPS systems that allow people to walk, drive, and cycle to their areas of interest with high levels of accuracy [1]. This, in conjunction with the ability to create custom software that interacts with databases and online storage, creates the opportunity to build software tailored to runner and supporter engagement.
 
+
+Problem & Difference
+The problem is that the cost to entry for these softwares either cost too much or require proprietary equipment to track where youre running. By using something you have every day, such as a smart phone, we will be able to use GPS data to map routes, store logs, and develop running styles. We plan to implement machine learning into the program somehow to make it stand out, whether to have algorithms optimize running patters, or routes. We plan to have this app be a hub for runners, or just people who exercise. 
+ 
 ### 1.1 Related Work
 
 > Describe the related or existing work in detail. This section is like a
