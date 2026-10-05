@@ -82,6 +82,7 @@ Problem & Difference
 The problem is that the cost to entry for these softwares either cost too much or require proprietary equipment to track where youre running. By using something you have every day, such as a smart phone, we will be able to use GPS data to map routes, store logs, and develop running styles. We plan to implement machine learning into the program somehow to make it stand out, whether to have algorithms optimize running patters, or routes. We plan to have this app be a hub for runners, or just people who exercise. 
  
 ### 1.1 Related Work
+<!-- Task #13: Related Work comparative analysis in progress. -->
 
 > Describe the related or existing work in detail. This section is like a
 > survey on the selected problem or topic.
