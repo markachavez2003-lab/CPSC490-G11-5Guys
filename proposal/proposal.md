@@ -155,11 +155,15 @@ apart.
 Write each objective the way the guidance above asks — **an action word plus
 the measure that says it is done**, not a role-play sentence:
 
-- **Goal 1: Live runner tracking** (Epic #4)
-  - Objective 1.1: 〈Track postion during live event using phone〉 (#〈n〉)
-- **Goal 2: 〈your second goal〉** (Epic #〈n〉)
-  - Objective 2.1: 〈Action word + what you will complete + how it will be
-    measured〉 (#〈n〉)
+- **Goal 1: Live runner tracking** [[epic:#4]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/4)
+  - Objective 1.1: Track postion during live event using phone updating the postion as often as possible [[story:#28]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/28)
+   - Objective 1.2: Display postion of runner and route with constant live updates [[story:#29]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/29)
+- **Goal 2: Posts and Shareable Web Page** [[epic:#26]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/26)
+  - Objective 2.1: Allow runners to share posts will contain images and text which are uploaded by the user at each mile. [[story:#30]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/30)
+  - Objective 2.2: Display Data as soon as user uploads a post [[story:#31]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/31)
+- **Goal 3: Machine Learning** [[epic:#27]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/27)
+  - Objective 3.1: Determine runner pace using past and current runs [[story:#32]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/32)
+  - Objective 3.2:Predict the outcome of a race [[story:#33]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/33)
 
 〈Replace the brackets with your own 2–3 goals and their objectives, and put
 the **real issue numbers** in as you file them — gate G8 checks that every
