@@ -79,22 +79,26 @@ Date: 〈YYYY-MM-DD〉
 〈Your survey. Cite with bracketed numbers matching §8 — every reference must
 be a source your team has actually read.〉
 
-**Do a comparative analysis, not a list of summaries.** Find the existing
-ideas, products, papers, or tools that attack the same problem and compare
-them against each other on the dimensions that matter for your project, with
-honest pros and cons. Then say plainly what your project does differently and
-why that difference is worth the effort.
+For our project, we decided to do a marathon tracker app. Now this idea isnt a new idea, but we decided to have our own unique twist to it. There are currently several applications that allow users to track their running routes, distances, and performance using GPS technology. I will go into detail of some popular running apps below with Strava or Alltrails. While these applications share similar tracking features, the similarities stop here. For our app, we focus more on  running performance, route navigation, and user interaction. By going through the features of competitors, we can see how our Marathon Tracker project can provide a different experience for runners and outside viewers.
+
+Strava [1] is a fitness tracking application that allows users to record their running routes, distances, pace, and other performance statistics. One of its focuses are it's social features which let you share completed activities and interacting with other users. Although Strava supports live location sharing through its Beacon feature, our project aims to provide a different experience by allowing runners to create posts during a race that outside viewers can follow through a shared webpage link.
+
+Nike Run Club [2] is another running application that provides GPS tracking and guided training plans. Unlike Strava, Nike Run Club focuses more on helping runners improve through coaching and structured workouts. Our project aims to connect runners with their supporters by allowing them to share updates throughout their runs. We also plan to implement ai models to help users improve their running, allowing for live on the go coaching.
+
+AllTrails [3] is an outdoor navigation application that I have some experience using, and has a unique feature that could be useful to our app. It allows users to discover trails and track their routes using GPS. Alltrails focuses on mapping routes using GPS unlike Strava and Nike Run Club. The cool thing about it however is that since it uses gps, you are able to track where you are even in the wilds without data. It uses a large collection of trails from users to map routes. While we plan on having users contribute their routes, the ability to share locations with others live, and add post is unique to our app. 
+
 
 | Existing approach | What it does | Pros | Cons | Why ours differs |
 |---|---|---|---|---|
-| 〈product / paper [1]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-| 〈product / paper [2]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-| 〈product / paper [3]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| Strava [1] | Tracks GPS routes, running statistics, and social activities. | Strong tracking features, route planning, and community interaction. | Some advanced features require a subscription. |  features require a subscription. | Our app allows runners to create posts during a race that supporters can view through a shared webpage link. |
+| Nike Run Club [2] | Tracks runs and provides guided workouts and training plans. | Free training features, GPS tracking, and coaching. | Less focused on customizable data analysis. | Our app focuses on connecting runners with outside viewers through updates posted during a race.|
+| AllTrails [3] | Route discovery, GPS navigation, trail information | The ability to be used without cell service using gps | Some navigation features require payment, also less focused on running performance | Our app combines GPS tracking with a webpage where supporters can follow updates from runners during an event. |
 
-〈Discuss the table in prose — the table is evidence, the paragraph is the
-argument. "Nothing like this exists" is almost never true and reads as a
-missing survey; if a close competitor exists, say so and explain why you are
-still building this.〉
+While all three of these apps have a broad running app focus, they specialize in different aspects. Our project plans to focuses on allowing runners to create race specific posts that outside viewers can follow through a dedicated webpage.
+
+Our Marathon Tracker project's goal is to address this difference by creating an application that connects runners with their supporters during a race. Runners will be able to record their routes and performance using GPS while also creating posts that provide updates throughout the event. These updates will be accessible to outside viewers through a shared webpage link, allowing friends and family to follow the runner's experience without needing to participate in the race themselves. We also plan to explore machine learning techniques to analyze running performance using publicly available marathon datasets. By combining GPS tracking, runner-generated updates, and data-driven analysis, our project aims to provide an accessible platform for both runners and their supporters.
+
+
 
 ### 1.2 Problem Statements
 
@@ -289,13 +293,19 @@ what fraction of each artifact was AI-assisted, and how you verified it.〉
 
 ## 8. References
 
-> [1] Burges, C. J. C. Tutorial on Support Vector Machines for Pattern
-> Recognition. Kluwer Academic Publishers, 1998.
-> [2] Chen, P., Fan, R., and Lin, C. A study on SMO-type decomposition
-> methods for support vector machines. IEEE Transactions on Neural Networks,
-> 2006.
+> [2] Strava. Strava Features. https://www.strava.com/features
+> date accessed, 10/11/26
+> [3] Nike. Nike Run Club. https://www.nike.com/nrc-app
+> date accessed, 10/11/26
+> [4] AllTrails. AllTrails: Trail Guides & Maps. [https://www.alltrails.com/](https://support.alltrails.com/hc/en-us/sections/360003535812-AllTrails-Plus-features)
+> date accessed, 10/11/26
+> 
 > [3] For Wikipedia, specify the URL here
 > [4] For a web source, specify the URL here plus date accessed
+> 
+
+
+
 
 〈Number references in the order first cited and cite them in the text as
 [1], [2]. Every entry must be a source a team member has actually read and
