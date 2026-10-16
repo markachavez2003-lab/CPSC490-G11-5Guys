@@ -155,15 +155,15 @@ apart.
 Write each objective the way the guidance above asks — **an action word plus
 the measure that says it is done**, not a role-play sentence:
 
-- **Goal 1: Live runner tracking** [[epic:#4]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/4)
-  - Objective 1.1: Track postion during live event using phone updating the postion every 5 seconds. [[story:#28]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/28)
-  - Objective 1.2: Display postion of runner and route every 5 seconds. [[story:#29]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/29)
+- **Goal 1: Live Runner Tracking** [[epic:#4]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/4)
+  - Objective 1.1: Track position during live event using phone, updating the position every 5 seconds. [[story:#28]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/28)
+  - Objective 1.2: Display position of runner and route every 5 seconds. [[story:#29]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/29)
 - **Goal 2: Posts and Shareable Web Page** [[epic:#26]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/26)
   - Objective 2.1: Allow runners to share posts into public web pages which will contain images and text uploaded by the user at each mile with a limit of 1 photo and 100 characters of text. [[story:#30]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/30)
   - Objective 2.2: Display each post within 10 seconds of user upload. [[story:#31]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/31)
 - **Goal 3: Race Time Prediction** [[epic:#27]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/27)
-  - Objective 3.1: Determine runner pace using past and current runs. Pace is shown every 10 seconds. [[story:#32]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/32)
-  - Objective 3.2: Predict the finish time of a race within 5 percent margin of error against previous races. [[story:#33]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/33)
+  - Objective 3.1: Determine runner's pace using past and current runs. Pace is shown every 10 seconds. [[story:#32]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/32)
+  - Objective 3.2: Predict the finish time of a race within a 5 percent margin of error against previous races. [[story:#33]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/33)
 
 ## 3. Proposed Approaches
 
