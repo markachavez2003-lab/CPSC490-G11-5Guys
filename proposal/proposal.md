@@ -113,22 +113,15 @@ still building this.〉
 
 ### 1.2 Problem Statements
 
-> Briefly state the problem to solve in this project.
+**P1: Difficulty tracking runners during marathon events.** During a marathon, it can be difficult for spectators to keep track of a runner's location and progress throughout the race. This becomes especially difficult during larger events where runners are spread out across different parts of the course. As a result, friends and family may have trouble knowing where a runner is or when they might reach a certain location.
 
-〈Your problem statement(s), **concise** — a few sentences each, no
-background (that was §1) and no solution (that is §3). Number them P1, P2, …
-so later sections can refer back.〉
-
-**Every problem here must connect to the goals and objectives in §2, and
-every goal in §2 must trace back to a problem here.** A goal with no problem
-behind it is scope you invented; a problem with no goal is a problem you are
-not actually solving. Check both directions before you submit — this mapping
-is what the final project report is graded against.
+**P2: Lack of communication between runners and spectators.** Most running applications focus on tracking an individual's distance, pace, and overall performance. While this information is useful for runners, it does not always provide a way for spectators to stay updated during an ongoing race. This makes it harder for friends and family who cannot attend the event to follow along with a runner's experience.
 
 | Problem | Addressed by |
 |---|---|
-| P1 〈one line〉 | 〈Goal 1 (#n)〉 |
-| P2 〈one line〉 | 〈Goal 2 (#n)〉 |
+| P1: Difficulty tracking runners during marathon events | Goal 1 (Epic #4) |
+| P2: Lack of communication between runners and spectators | Goal 2 (issue pending) |
+
 
 ## 2. Goals and Objectives
 
