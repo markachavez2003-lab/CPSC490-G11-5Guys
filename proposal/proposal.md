@@ -121,11 +121,13 @@ Our Marathon Tracker project's goal is to address this difference by creating an
 
 **P2: Lack of communication between runners and spectators.** Most running applications focus on tracking an individual's distance, pace, and overall performance. While this information is useful for runners, it does not always provide a way for spectators to stay updated during an ongoing race. This makes it harder for friends and family who cannot attend the event to follow along with a runner's experience.
 
+**P3: Difficulty predicting runner pace and finish time.** Although many apps are able to calculate the average pace of runners for a given race, most apps are unable to determine the variance at each mile. During a race, runners can either slow down or speed up at any point in time throughout the event. Since each mile could differ, most calculations fail to account for changes in pace, meaning predictions based solely on an average pace leave out information on the final time such as time gained or lost.
+
 | Problem | Addressed by |
 |---|---|
-| P1: Difficulty tracking runners during marathon events | Goal 1 (Epic #4) |
-| P2: Lack of communication between runners and spectators | Goal 2 (issue pending) |
-
+| P1: Difficulty tracking runners during marathon events | Goal 1: Live Runner Tracking |
+| P2: Lack of communication between runners and spectators | Goal 2: Posts and Shareable Web Page |
+| P3: Difficulty predicting runner pace and finish time | Goal 3: Race Time Prediction |
 
 ## 2. Goals and Objectives
 
