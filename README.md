@@ -18,7 +18,7 @@ Instructors: see [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md).
 > runnable `prototype/`, the worked
 > [specification](docs/specs/example-spec.md) and
 > [design document](docs/design/example-design.md), and the
-> [project board](https://github.com/users/kyoungshin/projects/1) — so build
+> [project board](https://github.com/users/Card1n/projects/1/views/1) — so build
 > yours the same way.
 >
 > `scripts/bootstrap.sh` does the whole labels/milestones/branches/board

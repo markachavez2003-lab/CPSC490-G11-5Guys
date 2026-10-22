@@ -1,11 +1,12 @@
-# Project Proposal — 〈Project Title〉
+# Project Proposal — Marathon Tracker App
 
 **Department of Computer Science**
 **CPSC 490 Undergraduate Seminar in Computer Science — Proposal for Capstone Project**
 
-**Group 〈N〉 — 〈Group Name〉** · Sponsor: 〈RTX-3 / EL-1 / SNX-n / independent〉
-Authors: 〈Last, First (GitHub username)〉, 〈…〉
-Date: 〈YYYY-MM-DD〉
+**Group 11 — 5 Guys **  Sponsor: independent
+Authors: Chavez, Marco (markachavez2003) ,Covarrubias, Roberto (robertocovarrubias24), Castillo, Jaime (basikgoalz), Phan, Cardin (card1n) , Contreras, Luis (lcontreras18)
+Date: 2026-09-30
+Repository: https://github.com/markachavez2003-lab/CPSC490-G11-5Guys
 
 > **This file is the proposal document, not a README.** Its section numbers,
 > titles, and guidance are copied from the course Word template, so it
@@ -56,7 +57,11 @@ Date: 〈YYYY-MM-DD〉
 > paragraph. Abstract should not exceed one page. Any abstract exceeded
 > one-page limit must be shortened.
 
-〈Your abstract. Write it last.〉
+Marathon runners rely on GPS devices, such as smartphones and watches, to track routes, distances, and running times. Although existing running apps provide tools for recording and reviewing this information, some of those apps may rely on specialized equipment or features that may increase the cost of entry for runners looking to find more detailed performance analysis. The widespread use of smartphones provides an opportunity to develop a more accessible approach to collecting and analyzing running data.
+
+This project proposes a mobile application that uses GPS data and machine learning to analyze an individual's running performance. The app will record a runner's route and time and use publicly available marathon data, such as routes and performance times, as a baseline for analysis. By comparing an individual's running data with existing performance data, the system will explore methods for identifying more efficient running patterns and routes.
+
+The proposed systen is significant because it combines commonly available smartphone technology with data-driven analysis rather than requiring specialized tracking equipment. The project aims to demonstrate how publicly available marathon data and machine learning techniques can be incorporated into an accessible running application. The outcome of this project will be a functional prototype capable of collecting GPS-based running data, storing performance information, and providing analysis based on the collected and publicly available data.
 
 ## 1. Introduction
 
@@ -69,9 +74,19 @@ Date: 〈YYYY-MM-DD〉
 > importance or usefulness of the problem solving or project. Further
 > describes what makes your proposal different from existing ones.
 
-〈Your introduction.〉
 
+During a marathon event, runners track their distance and routes through GPS coordinates, with the use of watches and smartphones as tracking devices. These distances play a large role in the way the event takes place, as they determine routes, pacing, mile markers, and event meeting points between the runners and in-person supporters. 
+
+In the modern day, there exist numerous apps which all contain different methods of tracking an individual's path traveled and time. These running apps are usually tailored with individual runners in mind. More often than not, the data recorded is saved, allowing for sharing after the runner has finished.
+
+Moreover, most smartphones contain built-in GPS systems that allow people to walk, drive, and cycle to their areas of interest with high levels of accuracy [1]. This, in conjunction with the ability to create custom software that interacts with databases and online storage, creates the opportunity to build software tailored to runner and supporter engagement.
+
+
+Problem & Difference
+The problem is that the cost to entry for these softwares either cost too much or require proprietary equipment to track where youre running. By using something you have every day, such as a smart phone, we will be able to use GPS data to map routes, store logs, and develop running styles. We plan to implement machine learning into the program somehow to make it stand out, whether to have algorithms optimize running patters, or routes. We plan to have this app be a hub for runners, or just people who exercise. 
+ 
 ### 1.1 Related Work
+<!-- Task #13: Related Work comparative analysis in progress. -->
 
 > Describe the related or existing work in detail. This section is like a
 > survey on the selected problem or topic.
@@ -81,18 +96,18 @@ be a source your team has actually read.〉
 
 For our project, we decided to do a marathon tracker app. Now this idea isnt a new idea, but we decided to have our own unique twist to it. There are currently several applications that allow users to track their running routes, distances, and performance using GPS technology. I will go into detail of some popular running apps below with Strava or Alltrails. While these applications share similar tracking features, the similarities stop here. For our app, we focus more on  running performance, route navigation, and user interaction. By going through the features of competitors, we can see how our Marathon Tracker project can provide a different experience for runners and outside viewers.
 
-Strava [1] is a fitness tracking application that allows users to record their running routes, distances, pace, and other performance statistics. One of its focuses are it's social features which let you share completed activities and interacting with other users. Although Strava supports live location sharing through its Beacon feature, our project aims to provide a different experience by allowing runners to create posts during a race that outside viewers can follow through a shared webpage link.
+Strava [2] is a fitness tracking application that allows users to record their running routes, distances, pace, and other performance statistics. One of its focuses are it's social features which let you share completed activities and interacting with other users. Although Strava supports live location sharing through its Beacon feature, our project aims to provide a different experience by allowing runners to create posts during a race that outside viewers can follow through a shared webpage link.
 
-Nike Run Club [2] is another running application that provides GPS tracking and guided training plans. Unlike Strava, Nike Run Club focuses more on helping runners improve through coaching and structured workouts. Our project aims to connect runners with their supporters by allowing them to share updates throughout their runs. We also plan to implement ai models to help users improve their running, allowing for live on the go coaching.
+Nike Run Club [3] is another running application that provides GPS tracking and guided training plans. Unlike Strava, Nike Run Club focuses more on helping runners improve through coaching and structured workouts. Our project aims to connect runners with their supporters by allowing them to share updates throughout their runs. We also plan to implement ai models to help users improve their running, allowing for live on the go coaching.
 
-AllTrails [3] is an outdoor navigation application that I have some experience using, and has a unique feature that could be useful to our app. It allows users to discover trails and track their routes using GPS. Alltrails focuses on mapping routes using GPS unlike Strava and Nike Run Club. The cool thing about it however is that since it uses gps, you are able to track where you are even in the wilds without data. It uses a large collection of trails from users to map routes. While we plan on having users contribute their routes, the ability to share locations with others live, and add post is unique to our app. 
+AllTrails [4] is an outdoor navigation application that I have some experience using, and has a unique feature that could be useful to our app. It allows users to discover trails and track their routes using GPS. Alltrails focuses on mapping routes using GPS unlike Strava and Nike Run Club. The cool thing about it however is that since it uses gps, you are able to track where you are even in the wilds without data. It uses a large collection of trails from users to map routes. While we plan on having users contribute their routes, the ability to share locations with others live, and add post is unique to our app. 
 
 
 | Existing approach | What it does | Pros | Cons | Why ours differs |
 |---|---|---|---|---|
-| Strava [1] | Tracks GPS routes, running statistics, and social activities. | Strong tracking features, route planning, and community interaction. | Some advanced features require a subscription. |  features require a subscription. | Our app allows runners to create posts during a race that supporters can view through a shared webpage link. |
-| Nike Run Club [2] | Tracks runs and provides guided workouts and training plans. | Free training features, GPS tracking, and coaching. | Less focused on customizable data analysis. | Our app focuses on connecting runners with outside viewers through updates posted during a race.|
-| AllTrails [3] | Route discovery, GPS navigation, trail information | The ability to be used without cell service using gps | Some navigation features require payment, also less focused on running performance | Our app combines GPS tracking with a webpage where supporters can follow updates from runners during an event. |
+| Strava [2] | Tracks GPS routes, running statistics, and social activities. | Strong tracking features, route planning, and community interaction. | Some advanced features require a subscription. |  features require a subscription. | Our app allows runners to create posts during a race that supporters can view through a shared webpage link. |
+| Nike Run Club [3] | Tracks runs and provides guided workouts and training plans. | Free training features, GPS tracking, and coaching. | Less focused on customizable data analysis. | Our app focuses on connecting runners with outside viewers through updates posted during a race.|
+| AllTrails [4] | Route discovery, GPS navigation, trail information | The ability to be used without cell service using gps | Some navigation features require payment, also less focused on running performance | Our app combines GPS tracking with a webpage where supporters can follow updates from runners during an event. |
 
 While all three of these apps have a broad running app focus, they specialize in different aspects. Our project plans to focuses on allowing runners to create race specific posts that outside viewers can follow through a dedicated webpage.
 
@@ -102,22 +117,17 @@ Our Marathon Tracker project's goal is to address this difference by creating an
 
 ### 1.2 Problem Statements
 
-> Briefly state the problem to solve in this project.
+**P1: Difficulty tracking runners during marathon events.** During a marathon, it can be difficult for spectators to keep track of a runner's location and progress throughout the race. This becomes especially difficult during larger events where runners are spread out across different parts of the course. As a result, friends and family may have trouble knowing where a runner is or when they might reach a certain location.
 
-〈Your problem statement(s), **concise** — a few sentences each, no
-background (that was §1) and no solution (that is §3). Number them P1, P2, …
-so later sections can refer back.〉
+**P2: Lack of communication between runners and spectators.** Most running applications focus on tracking an individual's distance, pace, and overall performance. While this information is useful for runners, it does not always provide a way for spectators to stay updated during an ongoing race. This makes it harder for friends and family who cannot attend the event to follow along with a runner's experience.
 
-**Every problem here must connect to the goals and objectives in §2, and
-every goal in §2 must trace back to a problem here.** A goal with no problem
-behind it is scope you invented; a problem with no goal is a problem you are
-not actually solving. Check both directions before you submit — this mapping
-is what the final project report is graded against.
+**P3: Difficulty predicting runner pace and finish time.** Although many apps are able to calculate the average pace of runners for a given race, most apps are unable to determine the variance at each mile. During a race, runners can either slow down or speed up at any point in time throughout the event. Since each mile could differ, most calculations fail to account for changes in pace, meaning predictions based solely on an average pace leave out information on the final time such as time gained or lost.
 
 | Problem | Addressed by |
 |---|---|
-| P1 〈one line〉 | 〈Goal 1 (#n)〉 |
-| P2 〈one line〉 | 〈Goal 2 (#n)〉 |
+| P1: Difficulty tracking runners during marathon events | Goal 1: Live Runner Tracking |
+| P2: Lack of communication between runners and spectators | Goal 2: Posts and Shareable Web Page |
+| P3: Difficulty predicting runner pace and finish time | Goal 3: Race Time Prediction |
 
 ## 2. Goals and Objectives
 
@@ -144,20 +154,15 @@ apart.
 Write each objective the way the guidance above asks — **an action word plus
 the measure that says it is done**, not a role-play sentence:
 
-- **Goal 1: 〈e.g. Secure account management〉** (Epic #〈n〉)
-  - Objective 1.1: 〈Implement member registration and login with hashed
-    credentials, session expiry, and rejection of malformed input.〉 (#〈n〉)
-  - Objective 1.2: 〈Demonstrate the login round-trip in a runnable prototype
-    at the Week-8 in-class check.〉 (#〈n〉)
-- **Goal 2: 〈your second goal〉** (Epic #〈n〉)
-  - Objective 2.1: 〈Action word + what you will complete + how it will be
-    measured〉 (#〈n〉)
-
-〈Replace the brackets with your own 2–3 goals and their objectives, and put
-the **real issue numbers** in as you file them — gate G8 checks that every
-epic and story in your repository is linked from this section. A fully worked
-version of this, with live issues and a populated board, is in the course
-example repository.〉
+- **Goal 1: Live Runner Tracking** [[epic:#4]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/4)
+  - Objective 1.1: Track position during live event using phone, updating the position every 5 seconds. [[story:#28]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/28)
+  - Objective 1.2: Display position of runner and route every 5 seconds. [[story:#29]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/29)
+- **Goal 2: Posts and Shareable Web Page** [[epic:#26]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/26)
+  - Objective 2.1: Allow runners to share posts into public web pages which will contain images and text uploaded by the user at each mile with a limit of 1 photo and 100 characters of text. [[story:#30]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/30)
+  - Objective 2.2: Display each post within 10 seconds of user upload. [[story:#31]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/31)
+- **Goal 3: Race Time Prediction** [[epic:#27]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/27)
+  - Objective 3.1: Determine runner's pace using past and current runs. Pace is shown every 10 seconds. [[story:#32]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/32)
+  - Objective 3.2: Predict the finish time of a race within a 5 percent margin of error against previous races. [[story:#33]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/33)
 
 ## 3. Proposed Approaches
 
@@ -293,16 +298,14 @@ what fraction of each artifact was AI-assisted, and how you verified it.〉
 
 ## 8. References
 
-> [2] Strava. Strava Features. https://www.strava.com/features
-> date accessed, 10/11/26
-> [3] Nike. Nike Run Club. https://www.nike.com/nrc-app
-> date accessed, 10/11/26
-> [4] AllTrails. AllTrails: Trail Guides & Maps. [https://www.alltrails.com/](https://support.alltrails.com/hc/en-us/sections/360003535812-AllTrails-Plus-features)
-> date accessed, 10/11/26
-> 
-> [3] For Wikipedia, specify the URL here
-> [4] For a web source, specify the URL here plus date accessed
-> 
+[1] Osborne, A., Mossman, H., Caporn, S., and Coulthard, E. Comparing the accuracy and precision of smartphone and specialist handheld GNSS receivers for use in ecological fieldwork. Ecological Solutions and Evidence, 6(1), e70015, 2025. https://doi.org/10.1002/2688-8319.70015
+
+[2] Strava. Strava Features. https://www.strava.com/features (date accessed, 10/11/26)
+
+[3] Nike. Nike Run Club. https://www.nike.com/nrc-app (date accessed, 10/11/26)
+
+[4] AllTrails. AllTrails: Trail Guides & Maps. [https://www.alltrails.com/](https://support.alltrails.com/hc/en-us/sections/360003535812-AllTrails-Plus-features) (date accessed, 10/11/26)
+
 
 
 
