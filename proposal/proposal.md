@@ -196,6 +196,23 @@ trade-off each. If it runs past a page, you are writing §4.〉
 
 〈Your environment, resources, and planned activities.〉
 
+### Data Model and Flow Diagrams
+
+The proposed Marathon Tracker App design is documented
+in [Data Model and Flow Design](../docs/design/data-model.md).
+
+Figure 1 shows how GPS data moves from the runner
+application through Firebase to the spectator webpage.
+
+Figure 2 shows the relationships between runners,
+runs, GPS locations, and posts.
+
+Figure 3 shows how runners and spectators navigate
+their respective application screens.
+
+These diagrams represent the proposed design and
+may be updated as development progresses.
+
 **Diagrams belong in this section.** Include at minimum a high-level
 architecture diagram and a system (context) diagram; add the ER/EER model and
 a data-flow diagram where they help the reader understand what you are
@@ -222,6 +239,8 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 |---|---|---|---|
 | 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
 | 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
+| [Data Model and Flow Design](../docs/design/data-model.md) | design | GPS data flow, runner data model, and screen navigation | #47 |
+
 
 〈The scaffold ships `docs/specs/example-spec.md` and
 `docs/design/example-design.md` as worked examples — read them, then delete
@@ -241,6 +260,8 @@ G8 fails if such an issue exists that this section does not link.
 |---|---|---|---|---|---|
 | 〈#n〉 | 〈task〉 | 〈stand up the prototype login endpoint〉 | 〈#story〉 | 〈owner〉 | 〈Sprint 1〉 |
 | 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
+| [#47](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/47) | Task | Create data flow, ER, and screen flow diagrams | #31 | Luis Contreras | Sprint 2 |
+
 
 〈Replace these rows with your own, and keep the table current as you file new
 issues — with §2 it gives a reader every planned activity in one place, each
