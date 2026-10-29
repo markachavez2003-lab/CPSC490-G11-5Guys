@@ -260,6 +260,8 @@ G8 fails if such an issue exists that this section does not link.
 |---|---|---|---|---|---|
 | 〈#n〉 | 〈task〉 | 〈stand up the prototype login endpoint〉 | 〈#story〉 | 〈owner〉 | 〈Sprint 1〉 |
 | 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
+| [#47](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/47) | Task | Create data flow, ER, and screen flow diagrams | #31 | Luis Contreras | Sprint 2 |
+
 
 〈Replace these rows with your own, and keep the table current as you file new
 issues — with §2 it gives a reader every planned activity in one place, each
