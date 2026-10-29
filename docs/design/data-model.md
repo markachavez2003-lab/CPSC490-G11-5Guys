@@ -48,3 +48,60 @@ follow the runner's progress.
 JavaScript and Firebase are currently proposed
 technologies and may change as development progresses.
 
+
+## 2. Entity Relationship Diagram
+
+The following diagram shows how runner information,
+running sessions, GPS locations, and posts are related.
+
+```mermaid
+erDiagram
+    RUNNER ||--o{ RUN : completes
+    RUN ||--o{ LOCATION : records
+    RUN ||--o{ POST : contains
+
+    RUNNER {
+        string runner_id PK
+        string name
+        string email
+    }
+
+    RUN {
+        string run_id PK
+        string runner_id FK
+        datetime start_time
+        datetime end_time
+        float distance
+    }
+
+    LOCATION {
+        string location_id PK
+        string run_id FK
+        float latitude
+        float longitude
+        datetime recorded_at
+    }
+
+    POST {
+        string post_id PK
+        string run_id FK
+        string text
+        string image_url
+        datetime created_at
+    }
+```
+
+**Figure 2: Entity Relationship Diagram for the Marathon Tracker App.**
+
+A runner can complete multiple runs. Each run can contain
+multiple GPS location records and multiple posts.
+
+The RUN entity also stores information about previous
+runs, allowing runners to review their running history.
+
+These entities represent a proposed data model. If the
+team selects Firebase Cloud Firestore, they can be
+implemented using documents and collections rather than
+traditional SQL tables.
+
+
