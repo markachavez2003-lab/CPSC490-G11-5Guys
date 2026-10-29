@@ -8,7 +8,7 @@
 
 | Name | GitHub | Role |
 |---|---|---|
-| Marco Chavez | @markachavez2003 | Team Leader |
+| Marco Chavez | @markachavez2003-lab | Team Leader |
 | Roberto Covarrubias | @robertocovarrubias24 | Team Member |
 | Jaime Castillo | @basikgoalz | Team Member |
 | Cardin Phan | @card1n | Team Member |
@@ -33,6 +33,8 @@ Our project is a marathon tracking app that allows runners to share their progre
 - [Sprint Reviews](docs/sprint-reviews/)
 - [GitHub Issues](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues)
 - [Pull Requests](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/pulls)
+- [Project Board](https://github.com/users/markachavez2003-lab/projects/1)
+
 
 ## How We Work
 
