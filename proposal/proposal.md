@@ -266,6 +266,8 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 | 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
 | 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
 | [Data Model and Flow Design](../docs/design/data-model.md) | design | GPS data flow, runner data model, and screen navigation | #47 |
+| [Race Time Prediction](../docs/specs/race-time-prediction.md) | specification | Goal 3: Race time prediction, Objectives 3.1 and 3.2 | #27, #32, #33, #45 |
+
 
 
 〈The scaffold ships `docs/specs/example-spec.md` and
