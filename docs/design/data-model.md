@@ -104,4 +104,49 @@ team selects Firebase Cloud Firestore, they can be
 implemented using documents and collections rather than
 traditional SQL tables.
 
+## 3. Screen Flow Diagram
 
+The following diagram shows how runners and spectators
+navigate the Marathon Tracker application.
+
+```mermaid
+flowchart TD
+    A["Runner Opens App"]
+    B["Login / Home Screen"]
+    C["Start Run"]
+    D["Live Tracking Screen"]
+    E["Create Post Screen"]
+    F["Submit Post"]
+
+    G["Spectator Opens Shared Link"]
+    H["Spectator Webpage"]
+    I["View Runner Location"]
+    J["View Runner Posts"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> D
+
+    G --> H
+    H --> I
+    H --> J
+```
+
+**Figure 3: Screen Flow Diagram for the Marathon Tracker App.**
+
+The runner begins by opening the application and accessing
+the home screen. After starting a run, the application
+displays live tracking information.
+
+During the run, the runner can create a post containing
+a photo and up to 100 characters of text. After submitting
+the post, the runner returns to the live tracking screen.
+
+Spectators can open a shared link to view the runner's
+location and race posts on a webpage.
+
+The screen flow represents the proposed user experience
+and may be updated during implementation.
