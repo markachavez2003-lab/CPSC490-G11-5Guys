@@ -175,28 +175,6 @@ Think of this as the argument, not the manual: a reader should finish this
 section understanding *what* you will do and *why that* rather than the
 alternatives.〉
 
-**Marathon Tracker Tech Stack**
-
-**Frontend: Mobile App/ Spectator webpage**
-Mobile framework: React Native + Expo| Android and iOS app| JavaScript/ Typescript| supports GPS| Free
-Gps: Expo location| Record location, distance, pace
-Maps: react-native-maps or mapbox, (usable with google maps and apple maps)
-Connected through backend firebase | Store runs, posts and GPS data
-Website: React + Firebase Hosting | for Spectator webpage
-
-**Backend: Firebase**
-Runner accounts: has Authentication:Firebase Auth| native with firebase ecosystem
-Race prediction: Python | Pace estimates and model testing
-
-**Database**
-Database: Firebase Firestore | native with firebase ecosystem| Store runs, posts and GPS data
-Image storage: Firebase Cloud Storage| Post photos
-
-**Development**
-Development Tools: Vs code, Github, Andriod Studio, Google Collab
-Languages: Python (For prediction modeling), JavaScript (in React), C++ (In development)
-
-For Diagram, see docs/design/techstack.png
 
 **Keep the details out of this section.** Tooling, platforms, frameworks,
 DBMS choices, environment setup, diagrams, and the work breakdown all belong
@@ -235,6 +213,31 @@ their respective application screens.
 
 These diagrams represent the proposed design and
 may be updated as development progresses.
+
+**Marathon Tracker Tech Stack**
+
+**Frontend: Mobile App/ Spectator webpage**
+Mobile framework: React Native + Expo| Android and iOS app| JavaScript/ Typescript| supports GPS| (Its free, in one language so you dont need swift and Kotlin for andriod and ios)
+Gps: Expo location| Record location, distance, pace (Expo pairs well with React Native)
+Maps: react-native-maps or mapbox, (usable with google maps and apple maps, also react native + expo pairs with mapbox suggested by teammate)
+Connected through backend firebase | Store runs, posts and GPS data
+Website: React + Firebase Hosting | for Spectator webpage (in firebase ecosystem and react)
+
+**Backend: Firebase**
+Runner accounts: has Authentication:Firebase Auth| (native with firebase ecosystem)
+Race prediction: Python | Pace estimates and model testing | (not implemented yet until end)
+
+**Database**
+Database: Firebase Firestore | Store runs, posts and GPS data| (native with firebase ecosystem)
+Image storage: Firebase Cloud Storage| Post photos| (native with firebase ecosystem)
+
+**Development**
+Development Tools: Vs code, Github, Andriod Studio, Google Collab
+Languages: Python (For prediction modeling), JavaScript (in React), Firebase project, Mapbox API key.
+
+For Diagram, see docs/design/techstack.png
+
+Finishes [task:#48]
 
 **Diagrams belong in this section.** Include at minimum a high-level
 architecture diagram and a system (context) diagram; add the ER/EER model and
