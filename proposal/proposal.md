@@ -195,6 +195,7 @@ trade-off each. If it runs past a page, you are writing §4.〉
 > software development process.
 
 〈Your environment, resources, and planned activities.〉
+Specification Doument: docs/specs/posts-and-shareable-page.md
 
 ### Data Model and Flow Diagrams
 
