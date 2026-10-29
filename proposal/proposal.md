@@ -195,6 +195,23 @@ trade-off each. If it runs past a page, you are writing §4.〉
 
 〈Your environment, resources, and planned activities.〉
 
+### Data Model and Flow Diagrams
+
+The proposed Marathon Tracker App design is documented
+in [Data Model and Flow Design](../docs/design/data-model.md).
+
+Figure 1 shows how GPS data moves from the runner
+application through Firebase to the spectator webpage.
+
+Figure 2 shows the relationships between runners,
+runs, GPS locations, and posts.
+
+Figure 3 shows how runners and spectators navigate
+their respective application screens.
+
+These diagrams represent the proposed design and
+may be updated as development progresses.
+
 **Diagrams belong in this section.** Include at minimum a high-level
 architecture diagram and a system (context) diagram; add the ER/EER model and
 a data-flow diagram where they help the reader understand what you are
@@ -221,6 +238,8 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 |---|---|---|---|
 | 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
 | 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
+| [Data Model and Flow Design](../docs/design/data-model.md) | design | GPS data flow, runner data model, and screen navigation | #47 |
+
 
 〈The scaffold ships `docs/specs/example-spec.md` and
 `docs/design/example-design.md` as worked examples — read them, then delete
@@ -236,7 +255,9 @@ links every *other* work item: features, enhancements, bugs, tasks, and
 sub-tasks** — the concrete activities that deliver those objectives. CI gate
 G8 fails if such an issue exists that this section does not link.
 
+HEAD
 **Specifications.** We will define the live runner tracking, posts, sharable web page link, and the race prediction. This will be done in sprint 2. This design will deliver testable requirements for the tools used to link these goals together. [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) [[task:#44]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/44) [[task:#45]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/45)
+ origin/main
 
 **Design Diagrams.** We will create diagrams showing the architecture of the system as a whole. This will include how data is wrangled saved and displayed. This will be done in sprint 2. These diagrams will deliver a visual representation of the backend design. [[task:#46]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/46) [[task:#47]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/47)
 
