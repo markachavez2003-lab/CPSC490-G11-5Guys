@@ -255,9 +255,7 @@ links every *other* work item: features, enhancements, bugs, tasks, and
 sub-tasks** — the concrete activities that deliver those objectives. CI gate
 G8 fails if such an issue exists that this section does not link.
 
-HEAD
 **Specifications.** We will define the live runner tracking, posts, sharable web page link, and the race prediction. This will be done in sprint 2. This design will deliver testable requirements for the tools used to link these goals together. [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) [[task:#44]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/44) [[task:#45]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/45)
- origin/main
 
 **Design Diagrams.** We will create diagrams showing the architecture of the system as a whole. This will include how data is wrangled saved and displayed. This will be done in sprint 2. These diagrams will deliver a visual representation of the backend design. [[task:#46]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/46) [[task:#47]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/47)
 
