@@ -1,44 +1,68 @@
-# Prototype
+# Marathon Tracker App — Prototype
 
-Proof-of-concept code for 〈project title〉. **Prototype v0 is due Sep 27** with
-the proposal, and it grows every sprint; the Week-8 in-class check demos from
-this folder.
+This folder contains the starter prototype for our CPSC 490 Marathon Tracker App.
 
-This example implements the login slice behind story
-[#3](../../../issues/3) and task [#5](../../../issues/5) — deliberately tiny,
-because a prototype exists to answer one risky question, not to be the
-product. **Replace it with yours** and keep the shape: a small module, a test
-per acceptance criterion, and run instructions below that work on a machine
-that has never seen your project.
+The mobile application uses **React Native with Expo**. Our planned technology stack also includes Firebase for backend services, Mapbox for maps, and Python for race-time prediction.
+
+This initial skeleton establishes the project structure. No marathon tracking features have been implemented yet.
+
+## Requirements
+
+- Node.js (LTS version recommended)
+- npm
+- Expo Go on a compatible mobile device, or a supported emulator
+
+## How to install
+
+From the repository root:
+
+```bash
+cd prototype
+npm ci
+```
 
 ## How to run
 
+Start the Expo development server:
+
 ```bash
-cd prototype
-python login.py                 # smoke run: prints a truncated session token
+npm start
 ```
+
+Follow the instructions in the terminal to open the application on a supported device or emulator.
 
 ## How to test
 
+The starter project should be checked by confirming that Expo starts without errors.
+
 ```bash
-cd prototype
-pip install pytest              # once
-python -m pytest tests -q       # 4 tests
+npm start
 ```
 
-CI runs exactly these tests on every pull request (job **Prototype build &
-tests**). If you use Node instead of Python, put a `package.json` here with a
-`test` script and CI will detect and run that instead.
+Automated tests for the Marathon Tracker App have not been implemented yet.
 
-## What it proves
+## Environment variables
 
-That credentials can be checked and a session token issued, with unknown-user
-and wrong-password failures indistinguishable to the caller — the riskiest
-assumption in 〈the epic this belongs to〉.
+Copy the example environment file:
 
-## Status
+```bash
+cp .env.example .env
+```
 
-| Sprint | Increment |
-|---|---|
-| v0 (Sep 27) | login check + 4 tests (this example) |
-| Sprint 1 | 〈what you added〉 |
+Fill in the required configuration values when Firebase and Mapbox are integrated. Do not commit actual API keys or other secrets.
+
+## Current status
+
+**Sprint 2 — Prototype Skeleton (Issue #49)**
+
+- React Native + Expo starter project
+- Dependency files included
+- Environment configuration template planned
+- Setup and run instructions documented
+- No application features implemented yet
+
+## Planned features
+
+Future development will include runner tracking, race information, spectator features, and race-time prediction.
+
+These features are outside the scope of Issue #49.
