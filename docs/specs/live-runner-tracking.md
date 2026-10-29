@@ -13,10 +13,10 @@
 
 | ID | Requirement | Story |
 |---|---|---|
-| FR-1 | When a runner starts a race the, system shall to track the phone using GPS. | #28 |
+| FR-1 | When a runner starts a race, the system shall to track the phone using GPS. | #28 |
 | FR-2 | When tracking is started, the system shall have the runner position updated every 5 seconds. | #28 |
 | FR-3 | Once a spectator views the public webpage, the system shall display the runners current postion. | #29 |
-| FR-4 | While a race is in progress, the system shall have positional data diplayed on a map in both the app and spectator page.| #29 |
+| FR-4 | While a race is in progress, the system shall have positional data  and route diplayed on a map in both the app and spectator page.| #29 |
 | FR-5 | When a race is finished, the system shall stop the race stopping the tracking. | #28 |
 
 ## Non-functional requirements
@@ -39,6 +39,6 @@
 
 | Question | Owner | Needed by |
 |---|---|---|
-| How will the accuracy of a runners postion be determined| markchavez2003-lab | Sprint 3 |
+| How will the accuracy of a runners postion be determined| markachavez2003-lab | Sprint 3 |
 | How will a loss of connection be handled in live race | markchavez2003-lab | Sprint 3 |
 

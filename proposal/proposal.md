@@ -266,7 +266,7 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 | 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
 | 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
 | [Data Model and Flow Design](../docs/design/data-model.md) | design | GPS data flow, runner data model, and screen navigation | #47 |
-| [Live Runner Tracking](../docs/specs/live-runner-tracking.md) | specification | <one line in your words> | [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) |
+| [Live Runner Tracking](../docs/specs/live-runner-tracking.md) | specification | Requriments for tracking runner| [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) |
 
 
 〈The scaffold ships `docs/specs/example-spec.md` and
