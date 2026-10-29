@@ -86,7 +86,6 @@ Problem & Difference
 The problem is that the cost to entry for these softwares either cost too much or require proprietary equipment to track where youre running. By using something you have every day, such as a smart phone, we will be able to use GPS data to map routes, store logs, and develop running styles. We plan to implement machine learning into the program somehow to make it stand out, whether to have algorithms optimize running patters, or routes. We plan to have this app be a hub for runners, or just people who exercise. 
  
 ### 1.1 Related Work
-<!-- Task #13: Related Work comparative analysis in progress. -->
 
 > Describe the related or existing work in detail. This section is like a
 > survey on the selected problem or topic.
@@ -175,6 +174,7 @@ Think of this as the argument, not the manual: a reader should finish this
 section understanding *what* you will do and *why that* rather than the
 alternatives.〉
 
+
 **Keep the details out of this section.** Tooling, platforms, frameworks,
 DBMS choices, environment setup, diagrams, and the work breakdown all belong
 in §4 (Required Environment, Resources, and Planned Activities). If a
@@ -195,6 +195,7 @@ trade-off each. If it runs past a page, you are writing §4.〉
 > software development process.
 
 〈Your environment, resources, and planned activities.〉
+Specification Doument: docs/specs/posts-and-shareable-page.md
 
 ### Data Model and Flow Diagrams
 
@@ -212,6 +213,31 @@ their respective application screens.
 
 These diagrams represent the proposed design and
 may be updated as development progresses.
+
+**Marathon Tracker Tech Stack**
+
+**Frontend: Mobile App/ Spectator webpage**
+Mobile framework: React Native + Expo| Android and iOS app| JavaScript/ Typescript| supports GPS| (Its free, in one language so you dont need swift and Kotlin for andriod and ios)
+Gps: Expo location| Record location, distance, pace (Expo pairs well with React Native)
+Maps: react-native-maps or mapbox, (usable with google maps and apple maps, also react native + expo pairs with mapbox suggested by teammate)
+Connected through backend firebase | Store runs, posts and GPS data
+Website: React + Firebase Hosting | for Spectator webpage (in firebase ecosystem and react)
+
+**Backend: Firebase**
+Runner accounts: has Authentication:Firebase Auth| (native with firebase ecosystem)
+Race prediction: Python | Pace estimates and model testing | (not implemented yet until end)
+
+**Database**
+Database: Firebase Firestore | Store runs, posts and GPS data| (native with firebase ecosystem)
+Image storage: Firebase Cloud Storage| Post photos| (native with firebase ecosystem)
+
+**Development**
+Development Tools: Vs code, Github, Andriod Studio, Google Collab
+Languages: Python (For prediction modeling), JavaScript (in React), Firebase project, Mapbox API key.
+
+For Diagram, see docs/design/techstack.png
+
+Finishes [task:#48]
 
 **Diagrams belong in this section.** Include at minimum a high-level
 architecture diagram and a system (context) diagram; add the ER/EER model and
@@ -256,16 +282,15 @@ links every *other* work item: features, enhancements, bugs, tasks, and
 sub-tasks** — the concrete activities that deliver those objectives. CI gate
 G8 fails if such an issue exists that this section does not link.
 
-| Issue | Type | Activity | Parent | Owner | Sprint |
-|---|---|---|---|---|---|
-| 〈#n〉 | 〈task〉 | 〈stand up the prototype login endpoint〉 | 〈#story〉 | 〈owner〉 | 〈Sprint 1〉 |
-| 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
-| [#47](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/47) | Task | Create data flow, ER, and screen flow diagrams | #31 | Luis Contreras | Sprint 2 |
+**Specifications.** We will define the live runner tracking, posts, sharable web page link, and the race prediction. This will be done in sprint 2. This design will deliver testable requirements for the tools used to link these goals together. [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) [[task:#44]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/44) [[task:#45]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/45)
 
+**Design Diagrams.** We will create diagrams showing the architecture of the system as a whole. This will include how data is wrangled saved and displayed. This will be done in sprint 2. These diagrams will deliver a visual representation of the backend design. [[task:#46]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/46) [[task:#47]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/47)
 
-〈Replace these rows with your own, and keep the table current as you file new
-issues — with §2 it gives a reader every planned activity in one place, each
-traceable to the objective it serves.〉
+**Tech Stack.** The tools and services used for this project will be react native along with expo for the mobile developmnet. The backend will be made using firebase for a db, storage, and auth. Next mapbox will be used to display the live map, and python will be used for the race time prediction. This will be done is sprint 2. This tech stack will deliver the neccesary tools to build the our protype.[[task:#48]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/48)
+
+**Prototype Skeleton.** Within the protoype folder we will create files necessary to build the application. This will be done in sprint 2. This prototype skeleton provides us with a means to connect our tools and services. [[task:#49]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/49)
+
+**Proposal Fixes.** Removed old bare reference from proposal which is an old task refence §1.1. Done in sprint 2. This delivers a correct link. [[task:#42]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/42)
 
 ## 5. Project Outcomes
 
