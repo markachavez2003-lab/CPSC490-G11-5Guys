@@ -196,6 +196,23 @@ trade-off each. If it runs past a page, you are writing §4.〉
 
 〈Your environment, resources, and planned activities.〉
 
+### Data Model and Flow Diagrams
+
+The proposed Marathon Tracker App design is documented
+in [Data Model and Flow Design](../docs/design/data-model.md).
+
+Figure 1 shows how GPS data moves from the runner
+application through Firebase to the spectator webpage.
+
+Figure 2 shows the relationships between runners,
+runs, GPS locations, and posts.
+
+Figure 3 shows how runners and spectators navigate
+their respective application screens.
+
+These diagrams represent the proposed design and
+may be updated as development progresses.
+
 **Diagrams belong in this section.** Include at minimum a high-level
 architecture diagram and a system (context) diagram; add the ER/EER model and
 a data-flow diagram where they help the reader understand what you are
