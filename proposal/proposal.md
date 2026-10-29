@@ -175,6 +175,29 @@ Think of this as the argument, not the manual: a reader should finish this
 section understanding *what* you will do and *why that* rather than the
 alternatives.〉
 
+**Marathon Tracker Tech Stack**
+
+**Frontend: Mobile App/ Spectator webpage**
+Mobile framework: React Native + Expo| Android and iOS app| JavaScript/ Typescript| supports GPS| Free
+Gps: Expo location| Record location, distance, pace
+Maps: react-native-maps or mapbox, (usable with google maps and apple maps)
+Connected through backend firebase | Store runs, posts and GPS data
+Website: React + Firebase Hosting | for Spectator webpage
+
+**Backend: Firebase**
+Runner accounts: has Authentication:Firebase Auth| native with firebase ecosystem
+Race prediction: Python | Pace estimates and model testing
+
+**Database**
+Database: Firebase Firestore | native with firebase ecosystem| Store runs, posts and GPS data
+Image storage: Firebase Cloud Storage| Post photos
+
+**Development**
+Development Tools: Vs code, Github, Andriod Studio, Google Collab
+Languages: Python (For prediction modeling), JavaScript (in React), C++ (In development)
+
+For Diagram, see docs/design/techstack.png
+
 **Keep the details out of this section.** Tooling, platforms, frameworks,
 DBMS choices, environment setup, diagrams, and the work breakdown all belong
 in §4 (Required Environment, Resources, and Planned Activities). If a
