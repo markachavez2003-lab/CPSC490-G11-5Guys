@@ -27,7 +27,7 @@ and can be updated as the team finalizes its technology choices.
 The following diagram shows how GPS coordinates and race
 posts move through the proposed Marathon Tracker system.
 
- ```mermaid
+```mermaid
 flowchart TD
     A[Runner App] --> B[Firebase]
     B --> C[Cloud Firestore]
