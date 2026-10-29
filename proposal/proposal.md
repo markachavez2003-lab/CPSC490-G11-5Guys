@@ -198,11 +198,77 @@ building and what it depends on. Draw them with any graphical tool
 copies in `docs/design/` with both editable source and exported image, and
 reference them here.
 
-〈Number every figure, caption it, and point at it from the prose — "Figure 1
-shows the three deployment tiers and the trust boundary between them." A
-figure the text never mentions is decoration. See `docs/design/DIAGRAMS.md`
-for tools, conventions, and the rule that every box and arrow must be
-verified against reality.〉
+The live tracking design uses the runner's phone and device GPS as its input,
+a position service to validate and distribute updates, and a position store to
+retain the latest position and route samples for spectator applications.
+Figure 1 shows the major system components, Figure 2 shows the application
+boundary and external actors, and the live update path for both the current
+position and route is detailed in Figure 3.
+
+```mermaid
+flowchart TB
+  gps[Device GPS / location service]
+  subgraph system["Live runner tracking system"]
+    runnerApp[Runner mobile app]
+    positionService[Position service]
+    positionStore[(Position and route store)]
+    spectatorApp[Spectator client]
+  end
+  gps --> runnerApp
+  runnerApp -->|position update every 5 seconds| positionService
+  positionService --> positionStore
+  positionService -->|live position and route| spectatorApp
+```
+
+*Figure 1 — High-level architecture for live runner tracking. The runner app
+collects GPS samples, the position service processes them, and the position
+store retains the current position and route for spectator clients.*
+
+```mermaid
+flowchart LR
+  runner([Runner])
+  spectator([Spectator])
+  gps[Device GPS / location service]
+  subgraph system["Live runner tracking system"]
+    apps[Runner and spectator applications]
+    service[Position service and store]
+  end
+  runner -->|starts tracking| apps
+  gps -->|location samples| apps
+  apps -->|authenticated updates and queries| service
+  service -->|current position and route| apps
+  apps -->|view progress| spectator
+```
+
+*Figure 2 — System context for live runner tracking. The runner, spectator,
+and device GPS provider are external to the position tracking system.*
+
+```mermaid
+sequenceDiagram
+  participant GPS as Device GPS
+  participant Runner as Runner app
+  participant Service as Position service
+  participant Store as Position store
+  participant Spectator as Spectator client
+
+  loop Every 5 seconds while tracking is active
+    Runner->>GPS: Request location sample
+    GPS-->>Runner: latitude, longitude, timestamp, accuracy
+    Runner->>Service: Send authenticated position update
+    Service->>Store: Save position and append route sample
+    Store-->>Service: Position saved
+    Service-->>Spectator: Publish updated position and route
+    Spectator->>Spectator: Refresh displayed position
+  end
+```
+
+*Figure 3 — Live position update sequence. The runner phone supplies GPS
+samples, the position service stores and distributes them, and the spectator
+client refreshes its view while tracking remains active.*
+
+The complete architecture, separately captioned context and sequence diagrams,
+and planned component responsibilities are authoritative in
+[`docs/design/architecture.md`](../docs/design/architecture.md).
 
 ### Specification and design documents
 
@@ -215,7 +281,7 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 | Document | Kind | Covers | Issues |
 |---|---|---|---|
 | 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
-| 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
+| [`docs/design/architecture.md`](../docs/design/architecture.md) | design | system architecture, context, and live position update sequence | #46, parent #29 |
 
 〈The scaffold ships `docs/specs/example-spec.md` and
 `docs/design/example-design.md` as worked examples — read them, then delete
