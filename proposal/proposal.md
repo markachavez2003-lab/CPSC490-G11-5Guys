@@ -235,9 +235,9 @@ Image storage: Firebase Cloud Storage| Post photos| (native with firebase ecosys
 Development Tools: Vs code, Github, Andriod Studio, Google Collab
 Languages: Python (For prediction modeling), JavaScript (in React), Firebase project, Mapbox API key.
 
-For Diagram, see docs/design/techstack.png
+For Diagram, see docs/design/techstack_diagram.png
 
-Finishes [task:#48]
+Finishes [[task:#48]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/48)
 
 **Diagrams belong in this section.** Include at minimum a high-level
 architecture diagram and a system (context) diagram; add the ER/EER model and
@@ -247,11 +247,7 @@ building and what it depends on. Draw them with any graphical tool
 copies in `docs/design/` with both editable source and exported image, and
 reference them here.
 
-〈Number every figure, caption it, and point at it from the prose — "Figure 1
-shows the three deployment tiers and the trust boundary between them." A
-figure the text never mentions is decoration. See `docs/design/DIAGRAMS.md`
-for tools, conventions, and the rule that every box and arrow must be
-verified against reality.〉
+
 
 ### Specification and design documents
 
@@ -263,22 +259,11 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 
 | Document | Kind | Covers | Issues |
 |---|---|---|---|
-| 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
-| 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
-| [Data Model and Flow Design](../docs/design/data-model.md) | design | GPS data flow, runner data model, and screen navigation | #47 |
+| [Data Model and Flow Design](../docs/design/data-model.md) | design | GPS data flow, runner data model, and screen navigation | [[task:#47]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/47) |
+| [Live Runner Tracking](../docs/specs/live-runner-tracking.md) | specification | Requirements for tracking runner| [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) |
+| [Race Time Prediction](../docs/specs/race-time-prediction.md) | specification | Goal 3: Race time prediction, Objectives 3.1 and 3.2 | [[task:#45]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/45) |
+| [Posts and Shareable Page](../docs/specs/posts-and-shareable-page.md) | specification | Runners are able to upload posts to public webpage for their race | [[task:#44]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/44) |
 
-| [Live Runner Tracking](../docs/specs/live-runner-tracking.md) | specification | Requriments for tracking runner| [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) |
-| [Race Time Prediction](../docs/specs/race-time-prediction.md) | specification | Goal 3: Race time prediction, Objectives 3.1 and 3.2 | #27, #32, #33, #45 |
-
-
-
-
-〈The scaffold ships `docs/specs/example-spec.md` and
-`docs/design/example-design.md` as worked examples — read them, then delete
-them once you have your own, and list yours here.〉
-
-〈Replace these rows with your own. Each document names its epic and stories
-in its own first lines too (gate G2), so the trail runs both ways.〉
 
 ### Planned activities — the work items
 
@@ -296,6 +281,21 @@ G8 fails if such an issue exists that this section does not link.
 **Prototype Skeleton.** Within the protoype folder we will create files necessary to build the application. This will be done in sprint 2. This prototype skeleton provides us with a means to connect our tools and services. [[task:#49]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/49)
 
 **Proposal Fixes.** Removed old bare reference from proposal which is an old task refence §1.1. Done in sprint 2. This delivers a correct link. [[task:#42]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/42)
+
+**Sprint 1 proposal writing.** We wrote the proposal cover fields and filled the abstract. In addition, the introduction and background were written, as well as the problem and how our project differs from others. The related work and comparative table were also done. The problem statements were completed, and the goals and objectives were written. Lastly, the conditions for the homework 5 deadline were met. All of these were completed for Sprint 1, and each delivered updates to proposal.md as a deliverable.
+[[task:#7]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/7) [[task:#17]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/17) [[task:#8]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/8) [[task:#9]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/9) [[task:#13]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/13) [[task:#37]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/37) [[task:#3]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/3) [[task:#34]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/34)
+
+**Repo and board upkeep.** We created the sprint board and configured it. The GitHub usernames for each group member were added to the README, in addition to an explanation of what our application is. Lastly, we merged leftover work from the develop branch into main. These issues were completed between the first and second sprints, with the deliverables being the README.md and the proposal.md.
+[[task:#20]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/20) [[task:#40]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/40) [[task:#38]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/38)
+
+**Sprint 3 prototype.** We will connect the app to a Firebase db and run a test to confirm data is transferred correctly. The placeholder test for the CI will be updated to test our code. In addition, the GPS data to and from the Firestore db will be built and tested to meet our 5 second update and live spectator view criteria. These updates will be made during Sprint 3, and the deliverables will be files within the prototype/ folder, which will be used to form a demo prototype application.
+[[feature:#61]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/61) [[task:#64]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/64) [[feature:#59]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/59) [[feature:#69]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/69)
+
+**Sprint 3 writing and process.** We will write our approaches, environment, and implementation details within the proposal. In addition, the summary for live tracking, posts, and race time will be written in the specs. Lastly, issue links will be added in the proposal with a Sprint 2 write up. This will be done for Sprint 3, with the deliverables being updates to the proposal.md and the specs.
+[[task:#65]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/65) [[task:#72]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/72) [[task:#70]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/70) [[task:#73]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/73) [[task:#66]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/66) [[task:#62]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/62) [[task:#58]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/58) [[task:#60]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/60)
+
+**Sprint 4 prototype.** Our group will add features to allow for runners to upload a post that includes images and text to the db. The uploaded posts will display for spectators within 10 seconds. In addition, the route taken by the runner will be shown on the map. Lastly, the runner's baseline time will be used for comparison against the latest time for pace calculations. This will be done during Sprint 4. The deliverables will be in the prototype/ folder with the additions of code.
+[[feature:#63]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/63) [[feature:#74]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/74) [[feature:#67]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/67) [[feature:#68]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/68) [[feature:#71]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/71)
 
 ## 5. Project Outcomes
 
