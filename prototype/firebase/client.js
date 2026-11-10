@@ -23,3 +23,6 @@ const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
 // Connect to Firestore
 export const db = getFirestore(app);
+
+// note: to access firebase just run this command:
+// import { db } from "../firebase/client"; 
