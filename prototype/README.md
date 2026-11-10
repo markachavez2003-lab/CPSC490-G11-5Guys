@@ -21,6 +21,45 @@ cd prototype
 npm ci
 ```
 
+## Firebase Setup and Testing
+
+Our prototype uses Firebase Firestore to store and retrieve runner data.
+
+### 1. Install dependencies (If not already done above)
+
+From the prototype/ folder:
+
+```bash
+npm ci
+```
+### 2. Configure Firebase
+
+Copy .env.example into a new .env file and enter the Firebase configuration values provided by the team. Do not commit .env.
+
+### 3. Run the smoke test
+
+Make sure the Firestore document prototype_status/connection exists with the Boolean field ok: true and that its security rules allow reading it.
+
+From the prototype/ folder, run:
+
+```bash
+node --env-file=.env firestore-smoke-test.mjs
+```
+
+Expected output:
+
+```bash
+PASS: Firestore connection works!
+```
+
+### 4. Run the application
+
+```bash
+npm start
+```
+
+Follow the Expo instructions to open the application on a supported device or emulator.
+
 ## How to run
 
 Start the Expo development server:
