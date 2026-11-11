@@ -264,6 +264,8 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 | [Race Time Prediction](../docs/specs/race-time-prediction.md) | specification | Goal 3: Race time prediction, Objectives 3.1 and 3.2 | [[task:#45]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/45) |
 | [Posts and Shareable Page](../docs/specs/posts-and-shareable-page.md) | specification | Runners are able to upload posts to public webpage for their race | [[task:#44]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/44) |
 
+**Goal 3: Race Time Prediction.** Our team plans to estimate a runner's finishing time using their current pace and previous running data when available. The system will update the displayed pace every 10 seconds during active tracking and adjust the estimated finishing time when the runner's pace changes. Our goal is to keep the prediction within a 5% margin of error. We will test this feature using sample running data to check the pace calculations, prediction accuracy, and how the system handles missing information. The full requirements and acceptance criteria can be found in the [Race Time Prediction Specification](../docs/specs/race-time-prediction.md).
+
 
 ### Planned activities — the work items
 
