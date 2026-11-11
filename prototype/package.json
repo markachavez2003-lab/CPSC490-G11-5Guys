@@ -1,7 +1,18 @@
+
 {
   "name": "marathon-tracker-prototype",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest --ci --runInBand"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
   "dependencies": {
     "expo": "~58.0.21",
     "expo-status-bar": "~58.0.4",
@@ -9,12 +20,9 @@
     "react": "19.3.0",
     "react-native": "0.88.0"
   },
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "test": "node --check index.js && npx expo config --json > /dev/null"
+  "devDependencies": {
+    "jest": "^30.0.0",
+    "jest-expo": "~58.0.0"
   },
   "private": true
 }
