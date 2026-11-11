@@ -265,6 +265,66 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 | [Posts and Shareable Page](../docs/specs/posts-and-shareable-page.md) | specification | Runners are able to upload posts to public webpage for their race | [[task:#44]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/44) |
 
 
+
+
+
+〈The scaffold ships `docs/specs/example-spec.md` and
+`docs/design/example-design.md` as worked examples — read them, then delete
+them once you have your own, and list yours here.〉
+
+
+## Prototype Implementation — Firebase, GPS Tracking, and Spectator View
+
+**Firebase set-up / testing**
+We will create the firebase enviorment through firebase console.
+
+### Firebase Setup and Testing
+
+Our prototype uses Firebase Firestore to store and retrieve runner data. To set up i just created an account, and created new Firebase enviorment for project.
+
+Through the project's console, you can add different datasets, since our database uses firebase firestore, you navigate to Database and Storage within the console and add a new database "Firestore".
+
+Once the database is created it automatically gives me .env key values for linking to the firestore database system. I will copy this down and send to all group members.
+
+#### 1. Install dependencies (If not already done above)
+
+From the prototype/ folder:
+
+```bash
+npm ci
+```
+#### 2. Configure Firebase
+
+Copy .env.example into a new .env file and enter the Firebase configuration values provided by the team. Do not commit .env.
+
+#### Firebase smoke testing
+Next we want to test if the firestore database can properly connect to our project's prototype. I created a collection inside the firestore and marked it as a true boolean value called prototype_status. Then coded up a test to import firebase from prototype, and try to access the prototype_status value. If it connects then teh test worked meaning smoke test passed.
+
+Make sure the Firestore document prototype_status/connection exists with the Boolean field ok: true and that its security rules allow reading it.
+
+From the prototype/ folder, run:
+
+```bash
+node --env-file=.env firestore-smoke-test.mjs
+```
+
+Expected output:
+
+```bash
+PASS: Firestore connection works!
+```
+
+#### 4. Run the application
+
+```bash
+npm start
+```
+
+Follow the Expo instructions to open the application on a supported device or emulator.
+
+Firebase connection and smoke test (#61, PR #75)
+
+
 ### Planned activities — the work items
 
 The goals and objectives live in §2 as epics and user stories. **This section
