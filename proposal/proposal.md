@@ -173,17 +173,7 @@ We decided to go with two separate options because runners and spectators are us
 
 ## 4. Required Environment, Resources, and Planned Activities
 
-> Review the required and available resources and environment to complete
-> your project. For example, server, platform, software tools, operating
-> systems, DBMS, or any required skills.
->
-> Describe the expected activities to achieve the stated goals, e.g.,
-> software development process.
-
-〈Your environment, resources, and planned activities.〉
-
-
-Goal 2 focuses on allowing runners to share their race updates through a public webpage. Runners will be able to create posts containing up to 100 characters and one photo, with each post related to a specific race and mile marker. Spectators can view these updates using a shared link without needing to own an account. The system is also expected to display new posts within 10 seconds of a successful upload. These features and their acceptance criteria are described in the [Posts and Shareable Race Page Specification](../docs/specs/posts-and-shareable-page.md)  
+Specification Document: [Posts and Shareable Race Page](../docs/specs/posts-and-shareable-page.md)
 
 ### Data Model and Flow Diagrams
 
@@ -205,26 +195,32 @@ may be updated as development progresses.
 **Marathon Tracker Tech Stack**
 
 **Frontend: Mobile App/ Spectator webpage**
-Mobile framework: React Native + Expo| Android and iOS app| JavaScript/ Typescript| supports GPS| (Its free, in one language so you dont need swift and Kotlin for andriod and ios)
-Gps: Expo location| Record location, distance, pace (Expo pairs well with React Native)
-Maps: react-native-maps or mapbox, (usable with google maps and apple maps, also react native + expo pairs with mapbox suggested by teammate)
-Connected through backend firebase | Store runs, posts and GPS data
-Website: React + Firebase Hosting | for Spectator webpage (in firebase ecosystem and react)
+
+
+The team is planning to use React Native and Expo to develop the runner mobile application. React Native allows the team to build an application for both Android and iOS using JavaScript instead of having to develop two separate applications. Expo provides built-in tools that make development easier and help with access to a phone's GPS capabilities. These technologies will allow the team to achieve its goal of tracking a runner's location during a marathon.
+
+The team is planning to use Expo Location to access a user's GPS information from their mobile device. This will allow the application to collect location coordinates that would then be used to track the runner's distance and pace during a marathon. Expo Location also works with React Native and Expo, making it easier to integrate GPS tracking into the mobile application.
+
+The team plans to use React Native Maps or Mapbox to display runners' live locations and routes during a marathon. This will allow spectators to view a runner's live location and follow their progress throughout the race. Both mapping tools work with React Native, making them possible options for map integration into the mobile application.
+
+The team plans to use Firebase to connect the runner mobile application to the backend. Firebase will allow the application to store information such as race details, runner posts, and GPS location data. The information will then be used to update the spectator webpage so that spectators can follow a runner's progress in real time throughout the marathon.
+
+The team plans to use React to develop the spectator webpage. This will allow spectators to view runners' locations and race updates. Firebase Hosting will be used to make the webpage accessible online through a shared link. These technologies will allow the team to create a webpage that connects with the Firebase backend and correctly displays race information to spectators.
 
 **Backend: Firebase**
-Runner accounts: has Authentication:Firebase Auth| (native with firebase ecosystem)
-Race prediction: Python | Pace estimates and model testing | (not implemented yet until end)
+The team plans to use Firebase Authentication to manage runner accounts and allow users to securely sign into their accounts. Firebase Authentication works with the other Firebase services selected for the project. This makes it easier to manage user accounts and race information.
+
+The team plans to use Python to develop and test the race time prediction feature. Python will help the team develop an algorithm to calculate estimated finishing times based on a runner's pace and race progress. This feature is planned for a later stage of development.
 
 **Database**
-Database: Firebase Firestore | Store runs, posts and GPS data| (native with firebase ecosystem)
-Image storage: Firebase Cloud Storage| Post photos| (native with firebase ecosystem)
+The team plans to use Firebase Firestore as the main database for the marathon tracking application. Firestore will store information such as runner data, race details, GPS locations, and posts. Since Firestore is related to Firebase it becomes easier to connect the database with the mobile application and spectator webpage.
+
+The team plans to use Firebase Cloud Storage to store photos uploaded by runners during their marathons. This will allow runners to attach images to their race updates and make them available to spectators. Firebase Cloud Storage also works natively with other Firebase services used in the application.
 
 **Development**
-Development Tools: Vs code, Github, Andriod Studio, Google Collab
-Languages: Python (For prediction modeling), JavaScript (in React), Firebase project, Mapbox API key.
+The team plans to use Visual Studio Code for writing and editing the application's code. GitHub will be used for version control and collaboration between team members. Android Studio will help the team test the mobile application using an Android emulator, while Google Colab will be used to develop and test Python code for race time predictions.
 
-For Diagram, see docs/design/techstack_diagram.png
-
+For the tech stack diagram, see [Tech Stack Diagram](../docs/design/techstack_diagram.png).
 Finishes [[task:#48]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/48)
 
 **Diagrams belong in this section.** Include at minimum a high-level
