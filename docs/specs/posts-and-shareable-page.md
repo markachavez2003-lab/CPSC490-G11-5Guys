@@ -11,7 +11,6 @@
 
 ## Functional requirements
 
-Written in EARS form — "when 〈trigger〉, the system shall 〈response〉" — because each one then becomes a test almost verbatim.
 
 | ID | Requirement | Story |
 |---|---|---|
