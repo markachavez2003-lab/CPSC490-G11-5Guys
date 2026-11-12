@@ -51,5 +51,7 @@ yarn-error.*
 # Private Firebase credentials (never put these in a public repo)
 *serviceAccount*.json
 
+# Python virtual environment and cache
 .venv/
 __pycache__/
+*.pyc
