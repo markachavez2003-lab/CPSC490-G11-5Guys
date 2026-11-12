@@ -181,7 +181,9 @@ We decided to go with two separate options because runners and spectators are us
 > software development process.
 
 〈Your environment, resources, and planned activities.〉
-Specification Doument: docs/specs/posts-and-shareable-page.md
+
+
+Goal 2 focuses on allowing runners to share their race updates through a public webpage. Runners will be able to create posts containing up to 100 characters and one photo, with each post related to a specific race and mile marker. Spectators can view these updates using a shared link without needing to own an account. The system is also expected to display new posts within 10 seconds of a successful upload. These features and their acceptance criteria are described in the [Posts and Shareable Race Page Specification](../docs/specs/posts-and-shareable-page.md)  
 
 ### Data Model and Flow Diagrams
 
@@ -319,6 +321,8 @@ buildable. CI gate G9 fails if a documecode proposal/proposal.mdnt exists in `do
 | [Live Runner Tracking](../docs/specs/live-runner-tracking.md) | specification | Requirements for tracking runner| [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) |
 | [Race Time Prediction](../docs/specs/race-time-prediction.md) | specification | Goal 3: Race time prediction, Objectives 3.1 and 3.2 | [[task:#45]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/45) |
 | [Posts and Shareable Page](../docs/specs/posts-and-shareable-page.md) | specification | Runners are able to upload posts to public webpage for their race | [[task:#44]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/44) |
+
+**Goal 3: Race Time Prediction.** Our team plans to estimate a runner's finishing time using their current pace and previous running data when available. The system will update the displayed pace every 10 seconds during active tracking and adjust the estimated finishing time when the runner's pace changes. Our goal is to keep the prediction within a 5% margin of error. We will test this feature using sample running data to check the pace calculations, prediction accuracy, and how the system handles missing information. The full requirements and acceptance criteria can be found in the [Race Time Prediction Specification](../docs/specs/race-time-prediction.md).
 
 
 ### Planned activities — the work items
