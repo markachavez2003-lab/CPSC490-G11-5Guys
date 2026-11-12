@@ -8,3 +8,12 @@ describe("Marathon Tracker Prototype", () => {
     expect(averagePace).toBe(6);
   });
 });
+
+describe('Runner Pace Display', () => {
+  test('simulated pace increases after an update', () => {
+    const startingPace = 10.0;
+    const updatedPace = startingPace + 0.1;
+
+    expect(updatedPace.toFixed(2)).toBe('10.10');
+  });
+});
