@@ -231,7 +231,77 @@ building and what it depends on. Draw them with any graphical tool
 copies in `docs/design/` with both editable source and exported image, and
 reference them here.
 
+The live tracking design uses the runner's phone and device GPS as its input,
+a position service to validate and distribute updates, and a position store to
+retain the latest position and route samples for spectator applications.
+Figure 1 shows the major system components, Figure 2 shows the application
+boundary and external actors, and the live update path for both the current
+position and route is detailed in Figure 3.
 
+```mermaid
+flowchart TB
+  gps[Device GPS / location service]
+  subgraph system["Live runner tracking system"]
+    runnerApp[Runner mobile app]
+    positionService[Position service]
+    positionStore[(Position and route store)]
+    spectatorApp[Spectator client]
+  end
+  gps --> runnerApp
+  runnerApp -->|position update every 5 seconds| positionService
+  positionService --> positionStore
+  positionService -->|live position and route| spectatorApp
+```
+
+*Figure 1 — High-level architecture for live runner tracking. The runner app
+collects GPS samples, the position service processes them, and the position
+store retains the current position and route for spectator clients.*
+
+```mermaid
+flowchart LR
+  runner([Runner])
+  spectator([Spectator])
+  gps[Device GPS / location service]
+  subgraph system["Live runner tracking system"]
+    apps[Runner and spectator applications]
+    service[Position service and store]
+  end
+  runner -->|starts tracking| apps
+  gps -->|location samples| apps
+  apps -->|authenticated updates and queries| service
+  service -->|current position and route| apps
+  apps -->|view progress| spectator
+```
+
+*Figure 2 — System context for live runner tracking. The runner, spectator,
+and device GPS provider are external to the position tracking system.*
+
+```mermaid
+sequenceDiagram
+  participant GPS as Device GPS
+  participant Runner as Runner app
+  participant Service as Position service
+  participant Store as Position store
+  participant Spectator as Spectator client
+
+  loop Every 5 seconds while tracking is active
+    Runner->>GPS: Request location sample
+    GPS-->>Runner: latitude, longitude, timestamp, accuracy
+    Runner->>Service: Send authenticated position update
+    Service->>Store: Save position and append route sample
+    Store-->>Service: Position saved
+    Service-->>Spectator: Publish updated position and route
+    Spectator->>Spectator: Refresh displayed position
+  end
+```
+
+*Figure 3 — Live position update sequence. The runner phone supplies GPS
+samples, the position service stores and distributes them, and the spectator
+client refreshes its view while tracking remains active.*
+
+The complete architecture, separately captioned context and sequence diagrams,
+and planned component responsibilities are authoritative in
+[`docs/design/architecture.md`](../docs/design/architecture.md).
 
 ### Specification and design documents
 
@@ -247,6 +317,8 @@ buildable. CI gate G9 fails if a documecode proposal/proposal.mdnt exists in `do
 | [Live Runner Tracking](../docs/specs/live-runner-tracking.md) | specification | Requirements for tracking runner| [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) |
 | [Race Time Prediction](../docs/specs/race-time-prediction.md) | specification | Goal 3: Race time prediction, Objectives 3.1 and 3.2 | [[task:#45]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/45) |
 | [Posts and Shareable Page](../docs/specs/posts-and-shareable-page.md) | specification | Runners are able to upload posts to public webpage for their race | [[task:#44]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/44) |
+
+**Goal 3: Race Time Prediction.** Our team plans to estimate a runner's finishing time using their current pace and previous running data when available. The system will update the displayed pace every 10 seconds during active tracking and adjust the estimated finishing time when the runner's pace changes. Our goal is to keep the prediction within a 5% margin of error. We will test this feature using sample running data to check the pace calculations, prediction accuracy, and how the system handles missing information. The full requirements and acceptance criteria can be found in the [Race Time Prediction Specification](../docs/specs/race-time-prediction.md).
 
 
 ### Planned activities — the work items
