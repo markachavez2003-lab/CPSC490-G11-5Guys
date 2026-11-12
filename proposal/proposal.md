@@ -165,25 +165,11 @@ the measure that says it is done**, not a role-play sentence:
 
 ## 3. Proposed Approaches
 
-> Describe your proposed approach to solve the problem, specifying how you
-> will achieve the stated goals. List some possible strategies.
+For our project, we plan on creating a marathon tracking system that allows runners to share their location while participating in a race. We want to have a mobile app for runners and a separate website for spectators to follow along. The app will track the runner's progress throughout the race, while the website will allow spectators to see where the runner is and their estimated finishing time. Our main goal is to make it easier for people to follow someone during a marathon without having to be there in person.
 
-〈Your approach — **clear and concise**. State the strategy you chose, the
-alternatives you considered, and the reasoning that decided between them.
-Think of this as the argument, not the manual: a reader should finish this
-section understanding *what* you will do and *why that* rather than the
-alternatives.〉
+Another approach we could have taken was making one app that both runners and spectators could use. This would allow everything to be in one place and could make things easier to manage. However, this would also mean that spectators would have to download an app just to follow someone during a race, which might not be convenient for everyone.
 
-
-**Keep the details out of this section.** Tooling, platforms, frameworks,
-DBMS choices, environment setup, diagrams, and the work breakdown all belong
-in §4 (Required Environment, Resources, and Planned Activities). If a
-sentence here names a version number, a library, or a configuration, it
-probably belongs in §4 — leave a pointer instead ("the implementation stack
-is detailed in §4").
-
-〈A few paragraphs, or a short list of candidate strategies with one line of
-trade-off each. If it runs past a page, you are writing §4.〉
+We decided to go with two separate options because runners and spectators are using the system for different reasons. Runners need a way to track their location and progress, while spectators mainly want to see how the runner is doing. By having a separate website, spectators can simply open a link and follow along without downloading anything. Even though this might mean more work for our team, we think it would make the system easier to use for everyone.
 
 ## 4. Required Environment, Resources, and Planned Activities
 
@@ -254,7 +240,7 @@ reference them here.
 **Every specification and design document the team writes is listed here**
 with the objective it serves. This section is the index of the project's
 technical detail: §3 holds the argument, §4 holds the documents that make it
-buildable. CI gate G9 fails if a document exists in `docs/specs/` or
+buildable. CI gate G9 fails if a documecode proposal/proposal.mdnt exists in `docs/specs/` or
 `docs/design/` that this section does not link.
 
 | Document | Kind | Covers | Issues |
