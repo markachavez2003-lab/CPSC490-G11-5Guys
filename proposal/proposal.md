@@ -324,6 +324,16 @@ Follow the Expo instructions to open the application on a supported device or em
 
 Firebase connection and smoke test (#61, PR #75)
 
+### Prototype Implementation of GPS & Spectator
+
+Our implementation of GPS and Spectator wont be completly set up since this is only for the prototype stage.
+
+For GPS tracking, we plan to use Expo Location to collect the runner's GPS coordinates every five seconds. The application will send these coordinates to Firebase Cloud Firestore, where the runner's latest location will be stored. Ive already set up the firebase for this, and it will store users based on runs. These runs will contain a user, current location, and time stamp. When updated it can share between react and firestore. This will allow us to track the runner's progress throughout a race.
+
+For the spectator view, we plan to use React to create a webpage that retrieves the runner's location from Firestore. Mapbox will be used to display the runner's position on a map. The webpage will update the runner's position every five seconds, allowing spectators to follow their progress through a shared link without needing to install the mobile application.
+
+GPS, Spectator, & Firebase implementation documentation is tracked under [task:#62].
+
 
 ### Planned activities — the work items
 
