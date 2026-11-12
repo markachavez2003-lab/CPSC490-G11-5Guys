@@ -181,7 +181,9 @@ We decided to go with two separate options because runners and spectators are us
 > software development process.
 
 〈Your environment, resources, and planned activities.〉
-Specification Doument: docs/specs/posts-and-shareable-page.md
+
+
+Goal 2 focuses on allowing runners to share their race updates through a public webpage. Runners will be able to create posts containing up to 100 characters and one photo, with each post related to a specific race and mile marker. Spectators can view these updates using a shared link without needing to own an account. The system is also expected to display new posts within 10 seconds of a successful upload. These features and their acceptance criteria are described in the [Posts and Shareable Race Page Specification](../docs/specs/posts-and-shareable-page.md)  
 
 ### Data Model and Flow Diagrams
 
