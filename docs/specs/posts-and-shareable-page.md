@@ -47,5 +47,5 @@ Written in EARS form — "when 〈trigger〉, the system shall 〈response〉" �
 
 | Question | Proposed owner | Needed by |
 |---|---|---|
-| Spectators can access a runner's public race webpage through a unique shared link without creating an account or joining an event. |
+| Can spectators access a race page without joining an event? | Cardin | Resolved: Anyone with the shared link can view the public page without an account. |
 | Should we change our frameworks and programs based on what each member can code or should we just learn it for this project? | Team | Before integrated prototype |
