@@ -321,6 +321,76 @@ buildable. CI gate G9 fails if a documecode proposal/proposal.mdnt exists in `do
 **Goal 3: Race Time Prediction.** Our team plans to estimate a runner's finishing time using their current pace and previous running data when available. The system will update the displayed pace every 10 seconds during active tracking and adjust the estimated finishing time when the runner's pace changes. Our goal is to keep the prediction within a 5% margin of error. We will test this feature using sample running data to check the pace calculations, prediction accuracy, and how the system handles missing information. The full requirements and acceptance criteria can be found in the [Race Time Prediction Specification](../docs/specs/race-time-prediction.md).
 
 
+
+
+
+〈The scaffold ships `docs/specs/example-spec.md` and
+`docs/design/example-design.md` as worked examples — read them, then delete
+them once you have your own, and list yours here.〉
+
+
+## Prototype Implementation — Firebase, GPS Tracking, and Spectator View
+
+**Firebase set-up / testing**
+We will create the firebase enviorment through firebase console.
+
+### Firebase Setup and Testing
+
+Our prototype uses Firebase Firestore to store and retrieve runner data. To set up i just created an account, and created new Firebase enviorment for project.
+
+Through the project's console, you can add different datasets, since our database uses firebase firestore, you navigate to Database and Storage within the console and add a new database "Firestore".
+
+Once the database is created it automatically gives me .env key values for linking to the firestore database system. I will copy this down and send to all group members.
+
+#### 1. Install dependencies (If not already done above)
+
+From the prototype/ folder:
+
+```bash
+npm ci
+```
+#### 2. Configure Firebase
+
+Copy .env.example into a new .env file and enter the Firebase configuration values provided by the team. Do not commit .env.
+
+#### Firebase smoke testing
+Next we want to test if the firestore database can properly connect to our project's prototype. I created a collection inside the firestore and marked it as a true boolean value called prototype_status. Then coded up a test to import firebase from prototype, and try to access the prototype_status value. If it connects then teh test worked meaning smoke test passed.
+
+Make sure the Firestore document prototype_status/connection exists with the Boolean field ok: true and that its security rules allow reading it.
+
+From the prototype/ folder, run:
+
+```bash
+node --env-file=.env firestore-smoke-test.mjs
+```
+
+Expected output:
+
+```bash
+PASS: Firestore connection works!
+```
+
+#### 4. Run the application
+
+```bash
+npm start
+```
+
+Follow the Expo instructions to open the application on a supported device or emulator.
+
+Firebase connection and smoke test (#61, PR #75)
+
+### Prototype Implementation of GPS & Spectator
+
+Our implementation of GPS and Spectator wont be completly set up since this is only for the prototype stage.
+
+For GPS tracking, we plan to use Expo Location to collect the runner's GPS coordinates every five seconds. The application will send these coordinates to Firebase Cloud Firestore, where the runner's latest location will be stored. Ive already set up the firebase for this, and it will store users based on runs. These runs will contain a user, current location, and time stamp. When updated it can share between react and firestore. This will allow us to track the runner's progress throughout a race.
+
+For the spectator view, we plan to use React to create a webpage that retrieves the runner's location from Firestore. Mapbox will be used to display the runner's position on a map. The webpage will update the runner's position every five seconds, allowing spectators to follow their progress through a shared link without needing to install the mobile application.
+
+GPS, Spectator, & Firebase implementation documentation is tracked under [task:#62].
+
+
 ### Planned activities — the work items
 
 The goals and objectives live in §2 as epics and user stories. **This section
