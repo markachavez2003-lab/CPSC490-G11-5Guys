@@ -50,3 +50,6 @@ yarn-error.*
 !**/.env.example
 # Private Firebase credentials (never put these in a public repo)
 *serviceAccount*.json
+
+.venv/
+__pycache__/
