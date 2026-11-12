@@ -165,25 +165,11 @@ the measure that says it is done**, not a role-play sentence:
 
 ## 3. Proposed Approaches
 
-> Describe your proposed approach to solve the problem, specifying how you
-> will achieve the stated goals. List some possible strategies.
+For our project, we plan on creating a marathon tracking system that allows runners to share their location while participating in a race. We want to have a mobile app for runners and a separate website for spectators to follow along. The app will track the runner's progress throughout the race, while the website will allow spectators to see where the runner is and their estimated finishing time. Our main goal is to make it easier for people to follow someone during a marathon without having to be there in person.
 
-〈Your approach — **clear and concise**. State the strategy you chose, the
-alternatives you considered, and the reasoning that decided between them.
-Think of this as the argument, not the manual: a reader should finish this
-section understanding *what* you will do and *why that* rather than the
-alternatives.〉
+Another approach we could have taken was making one app that both runners and spectators could use. This would allow everything to be in one place and could make things easier to manage. However, this would also mean that spectators would have to download an app just to follow someone during a race, which might not be convenient for everyone.
 
-
-**Keep the details out of this section.** Tooling, platforms, frameworks,
-DBMS choices, environment setup, diagrams, and the work breakdown all belong
-in §4 (Required Environment, Resources, and Planned Activities). If a
-sentence here names a version number, a library, or a configuration, it
-probably belongs in §4 — leave a pointer instead ("the implementation stack
-is detailed in §4").
-
-〈A few paragraphs, or a short list of candidate strategies with one line of
-trade-off each. If it runs past a page, you are writing §4.〉
+We decided to go with two separate options because runners and spectators are using the system for different reasons. Runners need a way to track their location and progress, while spectators mainly want to see how the runner is doing. By having a separate website, spectators can simply open a link and follow along without downloading anything. Even though this might mean more work for our team, we think it would make the system easier to use for everyone.
 
 ## 4. Required Environment, Resources, and Planned Activities
 
@@ -195,7 +181,9 @@ trade-off each. If it runs past a page, you are writing §4.〉
 > software development process.
 
 〈Your environment, resources, and planned activities.〉
-Specification Doument: docs/specs/posts-and-shareable-page.md
+
+
+Goal 2 focuses on allowing runners to share their race updates through a public webpage. Runners will be able to create posts containing up to 100 characters and one photo, with each post related to a specific race and mile marker. Spectators can view these updates using a shared link without needing to own an account. The system is also expected to display new posts within 10 seconds of a successful upload. These features and their acceptance criteria are described in the [Posts and Shareable Race Page Specification](../docs/specs/posts-and-shareable-page.md)  
 
 ### Data Model and Flow Diagrams
 
@@ -247,14 +235,84 @@ building and what it depends on. Draw them with any graphical tool
 copies in `docs/design/` with both editable source and exported image, and
 reference them here.
 
+The live tracking design uses the runner's phone and device GPS as its input,
+a position service to validate and distribute updates, and a position store to
+retain the latest position and route samples for spectator applications.
+Figure 1 shows the major system components, Figure 2 shows the application
+boundary and external actors, and the live update path for both the current
+position and route is detailed in Figure 3.
 
+```mermaid
+flowchart TB
+  gps[Device GPS / location service]
+  subgraph system["Live runner tracking system"]
+    runnerApp[Runner mobile app]
+    positionService[Position service]
+    positionStore[(Position and route store)]
+    spectatorApp[Spectator client]
+  end
+  gps --> runnerApp
+  runnerApp -->|position update every 5 seconds| positionService
+  positionService --> positionStore
+  positionService -->|live position and route| spectatorApp
+```
+
+*Figure 1 — High-level architecture for live runner tracking. The runner app
+collects GPS samples, the position service processes them, and the position
+store retains the current position and route for spectator clients.*
+
+```mermaid
+flowchart LR
+  runner([Runner])
+  spectator([Spectator])
+  gps[Device GPS / location service]
+  subgraph system["Live runner tracking system"]
+    apps[Runner and spectator applications]
+    service[Position service and store]
+  end
+  runner -->|starts tracking| apps
+  gps -->|location samples| apps
+  apps -->|authenticated updates and queries| service
+  service -->|current position and route| apps
+  apps -->|view progress| spectator
+```
+
+*Figure 2 — System context for live runner tracking. The runner, spectator,
+and device GPS provider are external to the position tracking system.*
+
+```mermaid
+sequenceDiagram
+  participant GPS as Device GPS
+  participant Runner as Runner app
+  participant Service as Position service
+  participant Store as Position store
+  participant Spectator as Spectator client
+
+  loop Every 5 seconds while tracking is active
+    Runner->>GPS: Request location sample
+    GPS-->>Runner: latitude, longitude, timestamp, accuracy
+    Runner->>Service: Send authenticated position update
+    Service->>Store: Save position and append route sample
+    Store-->>Service: Position saved
+    Service-->>Spectator: Publish updated position and route
+    Spectator->>Spectator: Refresh displayed position
+  end
+```
+
+*Figure 3 — Live position update sequence. The runner phone supplies GPS
+samples, the position service stores and distributes them, and the spectator
+client refreshes its view while tracking remains active.*
+
+The complete architecture, separately captioned context and sequence diagrams,
+and planned component responsibilities are authoritative in
+[`docs/design/architecture.md`](../docs/design/architecture.md).
 
 ### Specification and design documents
 
 **Every specification and design document the team writes is listed here**
 with the objective it serves. This section is the index of the project's
 technical detail: §3 holds the argument, §4 holds the documents that make it
-buildable. CI gate G9 fails if a document exists in `docs/specs/` or
+buildable. CI gate G9 fails if a documecode proposal/proposal.mdnt exists in `docs/specs/` or
 `docs/design/` that this section does not link.
 
 | Document | Kind | Covers | Issues |
@@ -263,6 +321,8 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 | [Live Runner Tracking](../docs/specs/live-runner-tracking.md) | specification | Requirements for tracking runner| [[task:#43]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/43) |
 | [Race Time Prediction](../docs/specs/race-time-prediction.md) | specification | Goal 3: Race time prediction, Objectives 3.1 and 3.2 | [[task:#45]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/45) |
 | [Posts and Shareable Page](../docs/specs/posts-and-shareable-page.md) | specification | Runners are able to upload posts to public webpage for their race | [[task:#44]](https://github.com/markachavez2003-lab/CPSC490-G11-5Guys/issues/44) |
+
+**Goal 3: Race Time Prediction.** Our team plans to estimate a runner's finishing time using their current pace and previous running data when available. The system will update the displayed pace every 10 seconds during active tracking and adjust the estimated finishing time when the runner's pace changes. Our goal is to keep the prediction within a 5% margin of error. We will test this feature using sample running data to check the pace calculations, prediction accuracy, and how the system handles missing information. The full requirements and acceptance criteria can be found in the [Race Time Prediction Specification](../docs/specs/race-time-prediction.md).
 
 
 ### Planned activities — the work items
