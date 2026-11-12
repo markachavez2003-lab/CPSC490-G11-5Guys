@@ -16,7 +16,7 @@ Written in EARS form — "when 〈trigger〉, the system shall 〈response〉" �
 | ID | Requirement | Story |
 |---|---|---|
 | FR-1 | When a user creates post, the system shall make the post linked to a specific distance in the race | #30 |
-| FR-2 | When a user enters text to post, system doesnt accept any post longer than 100 charecters, and if rejected display error message | #30 |
+| FR-2 | When a user enters text to post, system doesnt accept any post longer than 100 characters, and if rejected display error message | #30 |
 | FR-3 | When a runner attaches more than one photo to a post, the system shall reject the additional photos and display an error message | #30 |
 | FR-4 | When a runner submits a valid post, the system shall save its text, mile marker, and any attached photo under the correct race. | #30 |
 | FR-5 | When a spectator opens a race's shared webpage, the system shall display only posts associated with that race, including each post's mile marker, text, and any attached photo. | #30 |
